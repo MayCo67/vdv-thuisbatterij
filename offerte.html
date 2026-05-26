@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Offerte Thuisbatterij – VDV Installaties</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('YmRe4gB_0I2qsuVxt');</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--or:#E84F1C;--nv:#1B2B6E;--nvd:#0F1B4D;--wh:#fff;--ow:#F7F8FC;--gr:#6b7280;--gl:#E8EAF2;}
@@ -651,6 +653,10 @@ function stuurAkkoordMail(){
   .then(function(r){ return r.json(); })
   .then(function(d){
     if(d.success){
+      emailjs.send('service_l95a0ai', 'template_wcpin88', {
+        email_klant: email,
+        naam_klant: naam
+      });
       toonFeestAnimatie();
     } else {
       if(btn){ btn.textContent='Geef akkoord & verstuur'; btn.style.opacity='1'; btn.style.cursor='pointer'; }
