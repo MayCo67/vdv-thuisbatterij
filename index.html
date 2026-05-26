@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>AlphaESS SMILE-G3 | VDV Installaties</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+/* Hide native number spinners */
+input[type=number]{-moz-appearance:textfield}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+:root{--or:#E84F1C;--orl:#FF6B35;--nv:#1B2B6E;--nvd:#0F1B4D;--nvm:#253580;--wh:#fff;--ow:#F7F8FC;--gr:#8A8FA8;--gl:#E8EAF2;--tx:#1a1a2e}
+body{font-family:'Barlow',sans-serif;background:var(--wh);color:var(--tx);overflow-x:hidden}
+nav{background:var(--nvd);padding:0 5%;display:flex;align-items:center;justify-content:center;height:72px;position:sticky;top:0;z-index:100;border-bottom:3px solid var(--or)}
+.logo-svg{height:52px;width:auto}
+nav ul{list-style:none;display:flex;gap:24px;align-items:center}
+nav ul a{color:rgba(255,255,255,.8);text-decoration:none;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;transition:color .2s}
+nav ul a:hover{color:var(--or)}
+.ncta{background:var(--or)!important;color:#fff!important;padding:9px 20px;border-radius:4px}
+.hero{background:linear-gradient(135deg,var(--nvd) 0%,var(--nvm) 60%,#1a3a8a 100%);min-height:88vh;display:flex;align-items:center;justify-content:center;padding:80px 5%;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:500px;height:500px;border-radius:50%;background:rgba(232,79,28,.07);pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,79,28,.18);border:1px solid rgba(232,79,28,.45);color:#FF9A6C;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:20px}
+.badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--or);animation:p 1.8s infinite}
+@keyframes p{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.model-tag{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.9);font-size:13px;font-weight:700;letter-spacing:1.5px;padding:5px 14px;border-radius:4px;margin-bottom:18px;font-family:'Barlow Condensed',sans-serif}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(40px,5vw,68px);font-weight:800;color:#fff;line-height:1.05;margin-bottom:16px}
+.hero h1 span{color:var(--or)}
+.hero p{font-size:17px;color:rgba(255,255,255,.72);max-width:480px;margin-bottom:32px;line-height:1.75}
+.btns{display:flex;gap:16px;flex-wrap:wrap}
+.btnp{background:var(--or);color:#fff;padding:14px 28px;border-radius:4px;font-size:15px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .2s,transform .15s}
+.btnp:hover{background:var(--orl);transform:translateY(-1px)}
+.btno{background:transparent;color:#fff;padding:13px 26px;border-radius:4px;font-size:15px;font-weight:700;text-decoration:none;border:1.5px solid rgba(255,255,255,.38);transition:border-color .2s,transform .15s}
+.btno:hover{border-color:#fff;transform:translateY(-1px)}
+.hcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:32px;max-width:380px;width:100%}
+.abadge{background:var(--or);color:#fff;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:3px;display:inline-block;margin-bottom:14px}
+.hcard h3{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:800;color:#fff;margin-bottom:4px}
+.hcard .sub{font-size:11px;color:rgba(255,255,255,.4);margin-bottom:22px}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.sbox{background:rgba(255,255,255,.07);border-radius:8px;padding:12px}
+.sbox .v{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--or);line-height:1.1}
+.sbox .l{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px}
+.speci .si{display:flex;justify-content:space-between;font-size:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.speci .si:last-child{border-bottom:none}
+.speci .sk{color:rgba(255,255,255,.4)}
+.speci .sv{color:rgba(255,255,255,.9);font-weight:600}
+.trust{background:var(--nv);padding:18px max(5%, calc(50% - 640px));display:flex;justify-content:center;gap:36px;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.72);font-size:13px;font-weight:600}
+.tic{width:28px;height:28px;background:rgba(232,79,28,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+section{padding:76px max(5%, calc(50% - 640px))}
+.inner{max-width:1280px;margin:0 auto;width:100%}
+nav > .nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+.hero-inner{max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px}
+.trust-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;justify-content:center;gap:36px;flex-wrap:wrap}
+.footer-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+#slider-section{padding:40px 0 0 0 !important}
+.sl{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--or);margin-bottom:12px}
+h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,3.5vw,46px);font-weight:800;color:var(--nvd);line-height:1.1;margin-bottom:14px}
+h2 span{color:var(--or)}
+.intro{font-size:16px;color:var(--gr);max-width:580px;margin-bottom:48px;line-height:1.75}
+.spot{background:#fff}
+.spgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.mref{font-size:12px;font-weight:700;color:var(--or);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+.spot p{font-size:15px;color:#555;line-height:1.8;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{background:rgba(232,79,28,.09);color:var(--or);border:1px solid rgba(232,79,28,.25);font-size:12px;font-weight:700;padding:5px 12px;border-radius:100px}
+.stcard{background:#fff;border-radius:14px;border:1.5px solid var(--gl);overflow:hidden}
+.sth{background:var(--nvd);padding:16px 22px}
+.sth p{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:#fff}
+.sth span{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:1px}
+.st{width:100%;border-collapse:collapse}
+.st tr{border-bottom:1px solid var(--gl)}
+.st tr:last-child{border-bottom:none}
+.st td{padding:11px 20px;font-size:14px}
+.st td:first-child{color:var(--gr);width:46%}
+.st td:last-child{font-weight:700;color:var(--nvd)}
+.sh td:last-child{color:var(--or)}
+.vg{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.vc{background:var(--ow);border-radius:12px;padding:26px 22px;border-left:4px solid var(--or);transition:transform .2s,box-shadow .2s}
+.vc:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(27,43,110,.09)}
+.vi{width:44px;height:44px;background:rgba(232,79,28,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.vc h4{font-size:16px;font-weight:700;color:var(--nvd);margin-bottom:7px}
+.vc p{font-size:13px;color:var(--gr);line-height:1.65}
+.schaal{background:#fff}
+.schaal h2{color:var(--nvd)}
+.schaal .intro{color:var(--gr)}
+.schaal .sl{color:var(--or)}
+.scg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.scc{background:var(--nvd);border:1px solid rgba(27,43,110,.15);border-radius:12px;padding:22px 18px;text-align:center;transition:border-color .2s}
+.scc:hover{border-color:var(--or)}
+.scn{font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:800;color:var(--or);line-height:1;margin-bottom:4px}
+.scu{font-size:15px;font-weight:600;color:rgba(255,255,255,.7)}
+.scl{font-size:11px;color:rgba(255,255,255,.5);margin-top:6px;text-transform:uppercase;letter-spacing:.5px}
+.snote{margin-top:28px;background:rgba(232,79,28,.12);border:1px solid rgba(232,79,28,.3);border-radius:10px;padding:18px 24px;display:flex;align-items:center;gap:14px}
+.snote p{font-size:14px;color:rgba(255,255,255,.75);line-height:1.6}
+.snote strong{color:#FF9A6C}
+.stpg{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));position:relative}
+.stpg::before{display:none}
+.stp{text-align:center;padding:0 14px 32px;position:relative;z-index:1}
+.stpn{width:58px;height:58px;border-radius:50%;background:rgba(232,79,28,.4);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:4px solid var(--nvd);box-shadow:0 0 0 2px rgba(255,255,255,.2);transition:background .2s}
+.stp:hover .stpn{background:var(--or)}
+.stp h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:7px}
+.stp p{font-size:12px;color:rgba(255,255,255,.6)}
+.dyn{background:linear-gradient(135deg,var(--nvd),var(--nvm))}
+.dyn h2{color:#fff}
+.dyn .intro{color:rgba(255,255,255,.6);max-width:100%}
+.dyn .sl{color:rgba(232,79,28,.9)}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.di{display:flex;gap:14px;margin-bottom:24px}
+.dic{width:42px;height:42px;flex-shrink:0;background:rgba(232,79,28,.18);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.di h5{font-size:15px;font-weight:700;color:#fff;margin-bottom:5px}
+.di p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.65}
+.fc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:26px}
+.fc h4{font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:800;color:#fff;margin-bottom:10px}
+.fc>p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:14px}
+.psim{background:rgba(0,0,0,.2);border-radius:8px;padding:14px}
+.pr{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.pr:last-child{border-bottom:none}
+.prl{color:rgba(255,255,255,.4)}
+.prv{font-weight:700}
+.low{color:#4ade80}.hi{color:#f87171}.sv2{color:var(--or)}
+.sub-banner{background:linear-gradient(135deg,var(--nvd),var(--nvm));border-radius:16px;padding:48px 52px;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;position:relative;overflow:hidden}
+.sub-banner h3{font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:800;color:#fff;margin-bottom:10px}
+.sub-banner h3 span{color:var(--or)}
+.sub-banner p{font-size:15px;color:rgba(255,255,255,.68);max-width:500px;line-height:1.7}
+.rev{background:#fff}
+.rg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.rc{background:#fff;border-radius:12px;padding:24px;border:1px solid var(--gl)}
+.stars{display:flex;gap:3px;margin-bottom:12px}
+.star{width:14px;height:14px;fill:var(--or)}
+.rc blockquote{font-size:14px;font-style:italic;line-height:1.75;margin-bottom:16px}
+.rv{display:flex;align-items:center;gap:10px}
+.rva{width:36px;height:36px;border-radius:50%;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.rvn{font-weight:700;font-size:13px;color:var(--nvd)}
+.rvl{font-size:11px;color:var(--gr)}
+.cont{background:var(--nvd);color:#fff}
+.cont h2{color:#fff}
+.cg{display:grid;grid-template-columns:1fr 1.1fr;gap:52px;align-items:start}
+.cfw{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.fg label{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.fg input,.fg select,.fg textarea{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:6px;padding:11px 13px;color:#fff;font-family:'Barlow',sans-serif;font-size:14px;outline:none;transition:border-color .2s}
+#wiz-postcode,#wiz-huisnr,#wiz-naam,#wiz-email,#wiz-tel{background:#fff !important;color:#1B2B6E !important}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.25)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--or)}
+.fg select option{background:var(--nvd)}
+.fg textarea{resize:vertical;min-height:88px}
+.cii{display:flex;align-items:flex-start;gap:12px;margin-bottom:22px}
+.cic{width:40px;height:40px;background:rgba(232,79,28,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cii h5{font-size:11px;color:rgba(255,255,255,.4);margin-bottom:2px;text-transform:uppercase;letter-spacing:1px}
+.cii p{font-size:15px;font-weight:600;color:#fff}
+footer{background:var(--nvd);border-top:1px solid rgba(255,255,255,.07);padding:26px max(5%, calc(50% - 640px));display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer p{font-size:12px;color:rgba(255,255,255,.35)}
+footer a{color:rgba(255,255,255,.35);text-decoration:none}
+footer a:hover{color:var(--or)}
+.fl{display:flex;gap:20px;flex-wrap:wrap}
+@media(max-width:900px){
+  .hero-inner,.spgrid,.dg,.cg{grid-template-columns:1fr}
+  .hero{text-align:center;padding:60px 6%;min-height:auto}
+  .btns{justify-content:center}
+  .hero-inner>div:last-child{display:none}
+  .fr{grid-template-columns:1fr}
+  nav ul{display:none}
+  nav ul.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--nvd);padding:16px 5%;gap:0;z-index:999;border-top:1px solid rgba(255,255,255,.1)}
+  nav ul.open li a{padding:14px 0;display:block;border-bottom:1px solid rgba(255,255,255,.07);font-size:15px}
+  nav ul.open li:last-child a{border-bottom:none}
+  #hamburger{display:flex !important}
+  .sub-banner{grid-template-columns:1fr;padding:32px}
+  #wiz-modules, #b2-modules{grid-template-columns:1fr 1fr}
+  /* Business case calculator: 1 kolom op tablet/mobiel */
+  #bc-main-grid{grid-template-columns:1fr !important}
+  #business-case > div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important}
+  .foto5-grid{grid-template-columns:1fr !important}
+  #slider-section h2{font-size:20px}
+  section[style*="grid-template-columns:repeat"]{grid-template-columns:1fr !important}
+  .logo-svg{height:38px}
+  .scg{grid-template-columns:repeat(3,1fr)}
+  h2{font-size:clamp(20px,5vw,36px)}
+  .sub-banner > div:last-child{width:100%}
+  .sub-banner a{width:100%;text-align:center;box-sizing:border-box}
+  .vg{grid-template-columns:1fr}
+  .rg{grid-template-columns:1fr}
+  .stpg{overflow:hidden}
+  /* Contact sectie */
+  section#contact > div{grid-template-columns:1fr !important}
+  section#contact-top > div{grid-template-columns:1fr !important}
+  /* Trust bar wrap */
+  .trust{gap:16px;padding:14px 5%}
+  .ti{font-size:12px}
+  /* Brochure knop full width */
+  section[style*="text-align:center"] a[href="alphaess-brochure.html"]{width:100%;justify-content:center;box-sizing:border-box}
+}
+
+@media(max-width:600px){
+  nav{padding:0 4%}
+  .logo-svg{height:34px}
+  .hero{padding:56px 5% 48px;min-height:auto}
+  .hero h1{font-size:clamp(28px,7vw,42px);word-break:break-word}
+  .hero p{font-size:14px;max-width:100%}
+  .badge{font-size:10px;padding:5px 10px}
+  .model-tag{font-size:11px;white-space:normal;word-break:break-word}
+  .btnp,.btno{width:100%;justify-content:center;text-align:center}
+  section{padding:48px 4%}
+  /* Trust bar verticaal op klein scherm */
+  .trust{flex-direction:column;align-items:flex-start;gap:12px;padding:18px 4%}
+  /* Wizard modules 1 kolom */
+  #wiz-modules,#b2-modules{grid-template-columns:1fr}
+  /* Schaalbaarheid kleiner grid */
+  .scg{grid-template-columns:repeat(2,1fr)}
+  /* Sub-banner padding */
+  .sub-banner{padding:24px 20px}
+  /* Foto6 minder padding boven */
+  div[style*="foto6"]{padding-top:20px !important}
+  /* Footer flex col */
+  footer{flex-direction:column;align-items:flex-start;gap:16px;padding:20px 4%}
+  /* AlphaESS sectie padding */
+  section[style*="background:#fff"]{padding:48px 4% !important}
+  /* Hcard verberg op mobiel in hero */
+  .hcard{display:none}
+  /* Brochure knop full width */
+  a[href="alphaess-brochure.html"]{width:100% !important;justify-content:center !important;box-sizing:border-box}
+  /* Business case KPI blokken: 1 kolom op klein scherm */
+  #bc-kpi-grid{grid-template-columns:1fr 1fr !important}
+  /* Overtuigingstekst padding kleiner */
+  #bc-overtuiging{padding:24px 20px !important}
+  /* +/- knoppen iets smaller op klein scherm */
+  .bc-step-btn{width:34px !important}
+  /* Wizard padding smaller op klein scherm */
+  #wiz-step1,#wiz-step2,#wiz-step3,#wiz-step4,
+  #b2-step1,#b2-step2,#b2-step3,#b2-step4,
+  #wiz-done,#b2-done{padding:18px 16px !important}
+  /* Wizard header padding */
+  #contact .cont div[style*="gradient"],
+  #contact-top div[style*="gradient"]{padding:16px 18px !important}
+  /* Noodstroom toggle ook 1 kolom op heel klein scherm */
+  #wiz-nood,#b2-nood{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+  <img src="logo.jpg" alt="VDV Installaties" class="logo-svg"/>
+  <ul id="nav-menu">
+    <li><a href="#product">Product</a></li>
+    <li><a href="#voordelen">Voordelen</a></li>
+    <li><a href="#schaal">Schaalbaarheid</a></li>
+    <li><a href="#dynamic">Slim handelen</a></li>
+    <li><a href="#contact" class="ncta">Offerte aanvragen</a></li>
+  </ul>
+  <button id="hamburger" onclick="document.getElementById('nav-menu').classList.toggle('open')" style="display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px">
+    <span style="display:block;width:24px;height:2px;background:#fff;border-radius:2px"></span>
+    <span style="display:block;width:24px;height:2px;background:#fff;border-radius:2px"></span>
+    <span style="display:block;width:24px;height:2px;background:#fff;border-radius:2px"></span>
+  </button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+  <div>
+    <div class="badge">Gecertificeerd AlphaESS partner</div>
+    <div class="model-tag">SMILE-G3-BAT-9.3S &nbsp;·&nbsp; LiFePO₄ &nbsp;·&nbsp; 10.000 cycli</div>
+    <h1>Thuis energie opslaan<br/><span style="color:#fff">met</span> de <span>AlphaESS<br/>SMILE-G3-BAT-9.3S <span style="color:#fff">met</span> Omvormer <span style="color:#fff">en</span> EMS</span></h1>
+    <p>De krachtigste en meest schaalbare thuisbatterij van dit moment. VDV Installaties installeert uw systeem vakkundig — van 3.8 kWh tot meer dan 100 kWh.</p>
+    <div class="btns">
+      <a href="#contact" class="btnp">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Gratis offerte
+      </a>
+      <a href="#product" class="btno">Meer over het product</a>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:center">
+    <div class="hcard" style="padding:0;overflow:hidden;max-width:420px">
+      <!-- Foto bovenaan — zet foto1.jpg in dezelfde map als index.html -->
+      <div style="padding:16px 20px 8px 20px">
+        <div class="abadge" style="margin:0">AlphaESS SMILE-G3</div>
+      </div>
+      <div>
+        <img src="foto1.jpg" alt="AlphaESS SMILE-G3 thuisbatterij"
+             style="width:100%;height:380px;object-fit:contain;object-position:center;display:block;background:#ffffff;padding:8px 16px 16px"
+             onerror="this.style.display='none';document.getElementById('foto-placeholder').style.display='flex'"/>
+        <!-- Placeholder als foto1.jpg nog niet aanwezig is -->
+        <div id="foto-placeholder" style="display:none;width:100%;height:380px;background:rgba(255,255,255,.06);align-items:center;justify-content:center;flex-direction:column;gap:10px">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:12px;color:rgba(255,255,255,.3);text-align:center;padding:0 20px">Zet foto1.jpg in dezelfde map<br/>als index.html</span>
+        </div>
+      </div>
+      <!-- Specs onderaan de foto -->
+      <div style="padding:20px 24px">
+        <h3 style="margin-bottom:2px">SMILE-G3-BAT-9.3S</h3>
+        <p class="sub" style="margin-bottom:16px">96V LiFePO₄ thuisbatterij</p>
+        <div class="speci">
+          <div class="si"><span class="sk">Capaciteit module</span><span class="sv">9,3 kWh</span></div>
+          <div class="si"><span class="sk">Spanning</span><span class="sv">96V</span></div>
+          <div class="si"><span class="sk">IP-klasse</span><span class="sv">IP65 buiten</span></div>
+          <div class="si"><span class="sk">Levensduur</span><span class="sv">10.000 cycli</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-inner">
+  <div class="ti"><div class="tic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>10 jaar garantie</div>
+  <div class="ti"><div class="tic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>10.000 laadcycli</div>
+  <div class="ti"><div class="tic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>IP65 buitenmontage</div>
+  <div class="ti"><div class="tic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>500+ klanten</div>
+  <div class="ti"><div class="tic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg></div>Schaalbaar tot 100+ kWh</div>
+  </div>
+</div>
+
+<section class="cont" id="contact-top">
+  <div class="sl" style="color:rgba(255,255,255,.4)">Neem vrijblijvend contact op</div>
+  <h2>Vraag een gratis<br/><span>offerte aan</span></h2>
+  <div class="cg">
+    <div>
+      <p style="color:rgba(255,255,255,.65);font-size:16px;margin-bottom:32px;line-height:1.75">Binnen 2 werkdagen belt een adviseur u terug. Wij bepalen samen hoeveel modules optimaal zijn voor uw situatie.</p>
+      <div class="cii"><div class="cic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 011 2.91 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91A16 16 0 0015.1 16.9l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><h5>Telefoon</h5><p>0652021982</p></div></div>
+      <div class="cii"><div class="cic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h5>E-mail</h5><p>info@vdvinstallaties.nl</p></div></div>
+      <div class="cii"><div class="cic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h5>Adres</h5><p>Helmond, Noord-Brabant</p></div></div>
+    </div>
+    <!-- b2 wizard – zelfde stijl als screenshot -->
+    <div style="background:#fff;border-radius:16px;overflow:hidden;color:#1B2B6E;min-width:0;box-shadow:0 4px 24px rgba(0,0,0,.12)">
+      <!-- Header -->
+      <div style="background:linear-gradient(135deg,#1B2B6E,#253580);padding:20px 28px;display:flex;align-items:center;gap:16px">
+        <div style="width:44px;height:44px;background:rgba(232,79,28,.25);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:#fff;line-height:1.1">Offerte Aanvragen</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:2px">AlphaESS SMILE-G3 Thuisbatterij</div>
+        </div>
+      </div>
+      <!-- Voortgangsbalk -->
+      <div style="padding:20px 28px 0">
+        <div style="margin-bottom:10px">
+          <span style="font-size:12px;font-weight:700;color:#E84F1C" id="b2-staplabel">Stap 1 van 4 — Uw situatie</span>
+        </div>
+        <div style="background:#eee;border-radius:100px;height:5px;overflow:hidden">
+          <div id="b2-progress" style="height:100%;background:#E84F1C;border-radius:100px;transition:width .4s;width:25%"></div>
+        </div>
+      </div>
+      <!-- Stap 1 -->
+      <div id="b2-step1" style="padding:24px 28px">
+        <h3 style="font-size:20px;font-weight:800;color:#1B2B6E;margin-bottom:6px">Hoeveel modules wilt u?</h3>
+        <p style="font-size:13px;color:#888;margin-bottom:18px">Kies het aantal batterijmodules van 9,3 kWh per stuk.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px" id="b2-modules">
+          <div class="wiz-opt" data-val="9,3 kWh — 1 module" onclick="b2Select(this,'b2-modules')" style="border:2px solid #eee;border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:all .2s;background:#fff"><div style="font-size:28px;font-weight:800;color:#1B2B6E">1</div><div style="font-size:13px;color:#888">module — 9,3 kWh</div></div>
+          <div class="wiz-opt" data-val="20,2 kWh — 2 modules" onclick="b2Select(this,'b2-modules')" style="border:2px solid #eee;border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:all .2s;background:#fff"><div style="font-size:28px;font-weight:800;color:#1B2B6E">2</div><div style="font-size:13px;color:#888">modules — 20,2 kWh</div></div>
+          <div class="wiz-opt" data-val="30,3 kWh — 3 modules" onclick="b2Select(this,'b2-modules')" style="border:2px solid #eee;border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:all .2s;background:#fff"><div style="font-size:28px;font-weight:800;color:#1B2B6E">3</div><div style="font-size:13px;color:#888">modules — 30,3 kWh</div></div>
+          <div class="wiz-opt" data-val="Weet ik nog niet — graag advies" onclick="b2Select(this,'b2-modules')" style="border:2px solid #eee;border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:all .2s;background:#fff"><div style="font-size:22px;font-weight:800;color:#1B2B6E">?</div><div style="font-size:13px;color:#888">Weet ik nog niet</div></div>
+        </div>
+        <!-- Noodstroompakket -->
+        <div style="margin-bottom:16px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#888;margin-bottom:10px">Noodstroompakket (AlphaESS Backup Box)?</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" id="b2-nood">
+            <div class="wiz-opt" data-val="Ja, noodstroompakket gewenst" onclick="b2Select(this,'b2-nood')" style="border:2px solid #eee;background:#fff;border-radius:8px;padding:13px;text-align:center;cursor:pointer;transition:all .2s;font-weight:700;color:#888;font-size:14px">✓ Ja, graag</div>
+            <div class="wiz-opt" data-val="Geen noodstroompakket" onclick="b2Select(this,'b2-nood')" style="border:2px solid #eee;background:#fff;border-radius:8px;padding:13px;text-align:center;cursor:pointer;transition:all .2s;font-weight:700;color:#888;font-size:14px">× Nee</div>
+          </div>
+        </div>
+        <!-- Zonnepanelen -->
+        <div style="margin-bottom:20px">
+          <div style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#888;margin-bottom:8px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Heeft u al zonnepanelen?
+          </div>
+          <select id="b2-zonnepanelen" onchange="b2CheckStep1()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px 14px;font-size:14px;color:#1B2B6E;font-family:'Barlow',sans-serif;outline:none;background:#fff;cursor:pointer;transition:border-color .2s" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'">
+            <option value="">Maak een keuze...</option>
+            <option value="Ja, zonnepanelen aanwezig">Ja, ik heb zonnepanelen</option>
+            <option value="Nee, geen zonnepanelen">Nee, nog geen zonnepanelen</option>
+            <option value="Nee, maar wel interesse">Nee, maar ik ben geïnteresseerd</option>
+          </select>
+        </div>
+        <button onclick="b2Next(2)" id="b2-next1" style="width:100%;background:#E84F1C;opacity:.5;color:#fff;border:none;border-radius:8px;padding:14px;font-size:15px;font-weight:800;cursor:not-allowed;transition:all .2s">Volgende →</button>
+      </div>
+      <!-- Stap 2 -->
+      <div id="b2-step2" style="display:none;padding:24px 28px">
+        <h3 style="font-size:20px;font-weight:800;color:#1B2B6E;margin-bottom:20px">Wanneer wilt u de batterij laten installeren?</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px" id="b2-timing">
+          <div class="wiz-opt" data-val="Zo snel mogelijk" onclick="b2Select(this,'b2-timing')" style="border:2px solid #eee;border-radius:10px;padding:14px 18px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-weight:600;color:#1B2B6E">Zo snel mogelijk</span><div style="margin-left:auto;width:18px;height:18px;border-radius:50%;border:2px solid #ddd" class="wiz-radio"></div></div>
+          <div class="wiz-opt" data-val="Binnen 1-3 maanden" onclick="b2Select(this,'b2-timing')" style="border:2px solid #eee;border-radius:10px;padding:14px 18px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-weight:600;color:#1B2B6E">Binnen 1-3 maanden</span><div style="margin-left:auto;width:18px;height:18px;border-radius:50%;border:2px solid #ddd" class="wiz-radio"></div></div>
+          <div class="wiz-opt" data-val="Geen haast" onclick="b2Select(this,'b2-timing')" style="border:2px solid #eee;border-radius:10px;padding:14px 18px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-weight:600;color:#1B2B6E">Geen haast</span><div style="margin-left:auto;width:18px;height:18px;border-radius:50%;border:2px solid #ddd" class="wiz-radio"></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <button onclick="b2Back(1)" style="background:transparent;border:2px solid #ddd;border-radius:8px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;color:#1B2B6E">← Vorige</button>
+          <button onclick="b2Next(3)" id="b2-next2" style="background:#E84F1C;opacity:.5;color:#fff;border:none;border-radius:8px;padding:14px;font-size:15px;font-weight:800;cursor:not-allowed;transition:all .2s">Volgende →</button>
+        </div>
+      </div>
+      <!-- Stap 3 -->
+      <div id="b2-step3" style="display:none;padding:24px 28px">
+        <h3 style="font-size:20px;font-weight:800;color:#1B2B6E;margin-bottom:20px">Wat is uw adres?</h3>
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:12px">
+          <div><label style="font-size:12px;font-weight:700;color:#888;display:block;margin-bottom:6px">Postcode</label><input id="b2-postcode" type="text" placeholder="0000 PP" oninput="b2CheckStep3()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px;font-size:15px;color:#1B2B6E;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'"/></div>
+          <div><label style="font-size:12px;font-weight:700;color:#888;display:block;margin-bottom:6px">Huisnummer</label><input id="b2-huisnr" type="text" placeholder="22" oninput="b2CheckStep3()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px;font-size:15px;color:#1B2B6E;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'"/></div>
+        </div>
+        <div id="b2-adres-result" style="display:none;background:#f0f7ff;border:2px solid #E84F1C;border-radius:8px;padding:12px 14px;margin-bottom:16px;font-size:14px;color:#1B2B6E;font-weight:600"><span id="b2-adres-text"></span></div>
+        <div id="b2-adres-error" style="display:none;background:#fff3f0;border:2px solid #eee;border-radius:8px;padding:12px 14px;margin-bottom:16px;font-size:13px;color:#e84f1c">Adres niet gevonden. Controleer postcode en huisnummer.</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <button onclick="b2Back(2)" style="background:transparent;border:2px solid #ddd;border-radius:8px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;color:#1B2B6E">← Vorige</button>
+          <button onclick="b2Next(4)" id="b2-next3" style="background:#E84F1C;opacity:.5;color:#fff;border:none;border-radius:8px;padding:14px;font-size:15px;font-weight:800;cursor:not-allowed;transition:all .2s">Volgende →</button>
+        </div>
+      </div>
+      <!-- Stap 4 -->
+      <div id="b2-step4" style="display:none;padding:24px 28px">
+        <h3 style="font-size:20px;font-weight:800;color:#1B2B6E;margin-bottom:4px">Bijna klaar!</h3>
+        <p style="font-size:14px;color:#888;margin-bottom:20px">Laat uw gegevens achter voor een vrijblijvende offerte.</p>
+        <div style="margin-bottom:12px"><label style="font-size:12px;font-weight:700;color:#888;display:flex;align-items:center;gap:6px;margin-bottom:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Voor- en achternaam</label><input id="b2-naam" type="text" placeholder="Jan Jansen" oninput="b2CheckStep4()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px;font-size:15px;color:#1B2B6E;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'"/></div>
+        <div style="margin-bottom:12px"><label style="font-size:12px;font-weight:700;color:#888;display:flex;align-items:center;gap:6px;margin-bottom:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>E-mailadres</label><input id="b2-email" type="email" placeholder="jan@voorbeeld.nl" oninput="b2CheckStep4()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px;font-size:15px;color:#1B2B6E;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'"/></div>
+        <div style="margin-bottom:24px"><label style="font-size:12px;font-weight:700;color:#888;display:flex;align-items:center;gap:6px;margin-bottom:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 011 2.91 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91A16 16 0 0015.1 16.9l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Telefoonnummer</label><input id="b2-tel" type="tel" placeholder="06-12345678" oninput="b2CheckStep4()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px;font-size:15px;color:#1B2B6E;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'"/></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+          <button onclick="b2Back(3)" style="background:transparent;border:2px solid #ddd;border-radius:8px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;color:#1B2B6E">← Vorige</button>
+          <button id="b2-submit" onclick="b2Submit()" style="background:#E84F1C;opacity:.5;color:#fff;border:none;border-radius:8px;padding:14px;font-size:15px;font-weight:800;cursor:not-allowed;transition:all .2s">Versturen</button>
+        </div>
+        <p style="text-align:center;font-size:12px;color:#aaa">🔒 Uw gegevens worden vertrouwelijk behandeld</p>
+      </div>
+      <!-- Bevestiging -->
+      <div id="b2-done" style="display:none;text-align:center;padding:40px 28px">
+        <div style="font-size:48px;margin-bottom:16px">✅</div>
+        <h3 style="color:#1B2B6E;font-size:22px;font-weight:800;margin-bottom:8px">Aanvraag ontvangen!</h3>
+        <p style="color:#666;font-size:15px">Binnen 2 werkdagen neemt een adviseur contact met u op.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+var b2Data={};var b2AdresTimer=null;
+function b2CheckStep1(){var m=b2Data['b2-modules'];var zp=document.getElementById('b2-zonnepanelen').value;var btn=document.getElementById('b2-next1');if(m&&zp){btn.style.opacity='1';btn.style.cursor='pointer';}else{btn.style.opacity='.5';btn.style.cursor='not-allowed';}}
+function b2Select(el,groupId){
+  document.querySelectorAll('#'+groupId+' .wiz-opt').forEach(function(o){o.style.border='2px solid #eee';o.style.background='#fff';var r=o.querySelector('.wiz-radio');if(r)r.style.background='#fff';});
+  el.style.border='2px solid #E84F1C';el.style.background='rgba(232,79,28,.06)';var r=el.querySelector('.wiz-radio');if(r)r.style.background='#E84F1C';
+  b2Data[groupId]=el.getAttribute('data-val');
+  if(groupId==='b2-modules')b2CheckStep1();if(groupId==='b2-timing')b2Activate('b2-next2');
+}
+function b2Activate(id){var b=document.getElementById(id);if(b){b.style.opacity='1';b.style.cursor='pointer';}}
+function b2CheckStep3(){
+  var p=document.getElementById('b2-postcode').value.replace(/\s/g,'').toUpperCase();
+  var h=document.getElementById('b2-huisnr').value.trim();
+  var btn=document.getElementById('b2-next3');
+  var result=document.getElementById('b2-adres-result');var error=document.getElementById('b2-adres-error');var text=document.getElementById('b2-adres-text');
+  btn.style.opacity='.5';btn.style.cursor='not-allowed';result.style.display='none';error.style.display='none';
+  if(/^[1-9][0-9]{3}[A-Z]{2}$/.test(p)&&h){
+    clearTimeout(b2AdresTimer);
+    b2AdresTimer=setTimeout(function(){
+      text.textContent='🔍 Adres opzoeken...';result.style.display='block';
+      fetch('https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q='+encodeURIComponent(p+' '+h)+'&fq=type:adres&rows=1')
+        .then(function(r){return r.json();}).then(function(d){
+          if(d&&d.response&&d.response.docs&&d.response.docs.length>0){
+            var doc=d.response.docs[0];var straat=doc.straatnaam||'';var plaats=doc.woonplaatsnaam||'';var pc=doc.postcode||p;
+            if(straat){text.textContent='📍 '+straat+' '+h+', '+pc+' '+plaats;b2Data['adres']=straat+' '+h+', '+pc+' '+plaats;result.style.display='block';error.style.display='none';btn.style.opacity='1';btn.style.cursor='pointer';}else{throw new Error();}
+          }else{throw new Error();}
+        }).catch(function(){error.style.display='block';result.style.display='none';btn.style.opacity='1';btn.style.cursor='pointer';});
+    },700);
+  }
+}
+function b2CheckStep4(){var n=document.getElementById('b2-naam').value.trim();var e=document.getElementById('b2-email').value.trim();var t=document.getElementById('b2-tel').value.trim();var btn=document.getElementById('b2-submit');if(n&&e&&t){btn.style.opacity='1';btn.style.cursor='pointer';}else{btn.style.opacity='.5';btn.style.cursor='not-allowed';}}
+var b2Labels={1:'Stap 1 van 4 — Uw situatie',2:'Stap 2 van 4 — Planning',3:'Stap 3 van 4 — Uw adres',4:'Stap 4 van 4 — Uw gegevens'};
+function b2Next(step){for(var i=1;i<=4;i++){var el=document.getElementById('b2-step'+i);if(el)el.style.display=i===step?'block':'none';}document.getElementById('b2-staplabel').textContent=b2Labels[step]||('Stap '+step+' van 4');document.getElementById('b2-progress').style.width=(step*25)+'%';}
+function b2Back(step){b2Next(step);}
+function b2Submit(){
+  var n=document.getElementById('b2-naam').value.trim();
+  var e=document.getElementById('b2-email').value.trim();
+  var t=document.getElementById('b2-tel').value.trim();
+  if(!n||!e||!t)return;
+  var btn=document.getElementById('b2-submit');
+  btn.textContent='Versturen...'; btn.style.opacity='.7'; btn.style.cursor='not-allowed';
+  var modules=b2Data['b2-modules']||'Niet opgegeven';
+  var nood=b2Data['b2-nood']||'Niet opgegeven';
+  var zp=document.getElementById('b2-zonnepanelen').value||'Niet opgegeven';
+  var timing=b2Data['b2-timing']||'Niet opgegeven';
+  var adres=b2Data['adres']||'Niet opgegeven';
+  fetch('https://api.web3forms.com/submit',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({
+      access_key:'3e71e966-871e-4e34-84ce-62d140f2ec74',
+      subject:'Offerte aanvraag AlphaESS – '+n,
+      from_name:n, name:n, email:e,
+      telefoon:t, adres:adres, modules:modules,
+      noodstroompakket:nood, zonnepanelen:zp, planning:timing
+    })
+  })
+  .then(function(r){return r.json();})
+  .then(function(d){
+    if(d.success){
+      for(var i=1;i<=4;i++){var el=document.getElementById('b2-step'+i);if(el)el.style.display='none';}
+      document.getElementById('b2-done').style.display='block';
+      document.getElementById('b2-progress').style.width='100%';
+      document.getElementById('b2-staplabel').textContent='Klaar!';
+    } else {
+      btn.textContent='Versturen'; btn.style.opacity='1'; btn.style.cursor='pointer';
+      alert('Er ging iets mis. Probeer het opnieuw.');
+    }
+  })
+  .catch(function(){
+    btn.textContent='Versturen'; btn.style.opacity='1'; btn.style.cursor='pointer';
+    alert('Er ging iets mis. Probeer het opnieuw.');
+  });
+}
+</script>
+
+<!-- foto boven product sectie -->
+<div style="background:#fff;padding:32px max(5%, calc(50% - 640px)) 0">
+  <img src="foto6.jpg" alt="AlphaESS SMILE G3 installatie" style="width:100%;display:block;border-radius:12px"/>
+</div>
+
+<section id="product" class="spot" style="padding-top:48px">
+  <div class="sl">AlphaESS SMILE-G3 serie</div>
+    <div>
+      <h2>De <span>SMILE-G3-BAT-9.3S</span><br/>thuisbatterij</h2>
+      <div class="mref">Model: AlphaESS SMILE-G3-BAT-9.3S &nbsp;·&nbsp; 96V LiFePO₄</div>
+      <p>De AlphaESS SMILE-G3-BAT-9.3S is een modulaire 9,3 kWh LiFePO₄-thuisbatterij (96V) die uitblinkt in schaalbaarheid en prestaties. Speciaal ontworpen voor de nieuwste SMILE-G3 hybride omvormers in 1-fase (S5) of 3-fase (T4 - T20) uitvoering.</p>
+      <p>IP65-gecertificeerd voor buitenmontage, met ingebouwde verwarming voor koude winters. Dankzij LiFePO₄-technologie haalt u tot 10.000 laadcycli en een levensduur van 15 jaar — met 10 jaar fabrieksgarantie.</p>
+      <p>De batterijen zijn extreem veilig, de batterij is uitgerust met een Multi-BMS (Battery Management System) dat cellen monitort en bij defecten automatisch isoleert.</p>
+      <p>Ideaal voor slim handelen op dynamische energieprijzen, met koppeling aan Frank Energie, NextEnergy of vergelijkbare diensten.</p>
+      <div class="tags" style="margin-bottom:40px">
+        <span class="tag">LiFePO₄ veiligste cel</span>
+        <span class="tag">IP65 buitenmontage</span>
+        <span class="tag">96V systeem</span>
+        <span class="tag">Ingebouwde verwarming</span>
+        <span class="tag">SMILE-G3 S5 &amp; T20</span>
+        <span class="tag">Frank Energie koppeling</span>
+        <span class="tag">15 jaar levensduur</span>
+        <span class="tag">Dynamische tarieven</span>
+        <span class="tag">BTW-teruggave mogelijk</span>
+        <span class="tag">Warmtefonds lening</span>
+        <span class="tag">Kobaltvrij</span>
+        <span class="tag">Ontlading 100%</span>
+        <span class="tag">Modulair</span>
+      </div>
+    </div>
+    <div>
+      <div class="stcard">
+        <div class="sth"><p>Technische specificaties</p><span>SMILE-G3-BAT-9.3S</span></div>
+        <table class="st">
+          <tr class="sh"><td>Bruikbare capaciteit</td><td>9,3 kWh per module</td></tr>
+          <tr><td>Spanning</td><td>96V nominaal</td></tr>
+          <tr><td>Celtype</td><td>LiFePO₄</td></tr>
+          <tr class="sh"><td>Levensduur cycli</td><td>&gt; 10.000 cycli</td></tr>
+          <tr><td>Verwachte levensduur</td><td>15 jaar</td></tr>
+          <tr><td>Garantie</td><td>10 jaar fabrieksgarantie</td></tr>
+          <tr><td>IP-klasse</td><td>IP65 — geschikt buiten</td></tr>
+          <tr><td>Koude bescherming</td><td>Ingebouwde verwarming</td></tr>
+          <tr class="sh"><td>Schaalbaarheid</td><td>Tot 6 modules per cluster</td></tr>
+          <tr><td>Max. capaciteit</td><td>&gt; 100 kWh</td></tr>
+          <tr><td>Compatibel met</td><td>SMILE-G3 S5 &amp; T20</td></tr>
+          <tr><td>Slimme koppeling</td><td>Frank Energie / uurprijzen</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="voordelen" style="background:var(--nvd);padding:76px max(5%, calc(50% - 640px))">
+  <div class="sl" style="color:rgba(232,79,28,.9)">Waarom de SMILE-G3</div>
+  <h2 style="color:#fff">Zes sterke redenen<br/><span>voor deze batterij</span></h2>
+  <p class="intro" style="color:rgba(255,255,255,.6)">De SMILE-G3-BAT-9.3S combineert veiligheid, schaalbaarheid en slimme energie-integratie in één toekomstbestendig systeem.</p>
+  <div class="vg">
+    <div class="vc"><div class="vi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h4>Maximaal zelfverbruik</h4><p>Sla eigen zonne-energie op en gebruik die 's avonds. Stop met terugleveren voor een lage prijs.</p></div>
+    <div class="vc"><div class="vi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Veilige LiFePO₄-cellen</h4><p>Het veiligste lithium-celtype. Geen brandrisico, geen thermische doorloop — extreem stabiel.</p></div>
+    <div class="vc"><div class="vi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h4>Modulair &amp; schaalbaar</h4><p>Begin met 9,3 kWh en breid uit tot 6 modules — meer dan 100 kWh totaal.</p></div>
+    <div class="vc"><div class="vi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><h4>IP65 buitenmontage</h4><p>Stof- en spatwaterdicht met ingebouwde verwarming. Ideaal voor schuur of buitenwand.</p></div>
+    <div class="vc"><div class="vi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><text x="3" y="17" font-family="Arial" font-size="18" font-weight="900" fill="#E84F1C">€</text></svg></div><h4>Terugverdientijd ~6 jaar</h4><p>Met huidige energieprijzen en ISDE-subsidie verdient u de investering in 5 à 7 jaar terug.</p></div>
+    <div class="vc"><div class="vi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h4>Live inzicht via app</h4><p>Volg productie en accustatus realtime. Koppelbaar met Frank Energie voor maximale besparing.</p></div>
+  </div>
+</section>
+
+<section id="schaal" class="schaal">
+  <div class="sl">Modulaire opbouw</div>
+  <h2>Schaalbaar tot<br/><span>meer dan 100 kWh</span></h2>
+  <p class="intro">Start met één module en breid eenvoudig uit — tot 6 modules per cluster.</p>
+  <div class="scg">
+    <div class="scc"><div class="scn">9,3</div><div class="scu">kWh</div><div class="scl">1 module</div></div>
+    <div class="scc"><div class="scn">18,6</div><div class="scu">kWh</div><div class="scl">2 modules</div></div>
+    <div class="scc"><div class="scn">27,9</div><div class="scu">kWh</div><div class="scl">3 modules</div></div>
+    <div class="scc"><div class="scn">37,2</div><div class="scu">kWh</div><div class="scl">4 modules</div></div>
+    <div class="scc"><div class="scn">46,5</div><div class="scu">kWh</div><div class="scl">5 modules</div></div>
+    <div class="scc"><div class="scn">55,8</div><div class="scu">kWh</div><div class="scl">6 modules max.</div></div>
+  </div>
+  <div class="snote">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+    <p style="color:var(--nvd)">Meerdere clusters combineren voor totale capaciteiten van <strong style="color:var(--or)">meer dan 100 kWh</strong>. Ideaal voor grote woningen, bedrijven of combinatie met een laadpaal.</p>
+  </div>
+</section>
+
+<section style="background:var(--nvd);padding:76px max(5%, calc(50% - 640px))">
+  <div class="sl" style="color:rgba(232,79,28,.9)">Het installatieproces</div>
+  <h2 style="color:#fff">Van aanvraag tot<br/><span>energie besparen</span></h2>
+  <p class="intro" style="color:rgba(255,255,255,.6)">VDV Installaties regelt alles — van adviesgesprek tot inbedrijfstelling.</p>
+  <div style="position:relative">
+    <div class="stpg" id="stpg-steps">
+      <div class="stp"><div class="stpn">1</div><h4>Gratis adviesgesprek</h4><p>Wij analyseren uw verbruik en bepalen het juiste aantal modules.</p></div>
+      <div class="stp"><div class="stpn">2</div><h4>Offerte op maat</h4><p>Binnen 48 uur een heldere offerte inclusief subsidieadvies.</p></div>
+      <div class="stp"><div class="stpn">3</div><h4>Installatie door VDV</h4><p>Gecertificeerde monteurs plaatsen de SMILE-G3 vakkundig bij u thuis.</p></div>
+      <div class="stp"><div class="stpn">4</div><h4>App-koppeling</h4><p>Aansluiting op AlphaESS app en eventueel Frank Energie.</p></div>
+      <div class="stp"><div class="stpn">5</div><h4>Energie besparen</h4><p>Geniet van lagere rekeningen en maximale onafhankelijkheid.</p></div>
+    </div>
+    <!-- Geanimeerde golvende stroomlijn (desktop) -->
+    <div id="flow-wrapper" style="position:absolute;top:0px;left:5%;right:5%;height:58px;pointer-events:none;overflow:hidden;z-index:0">
+      <svg id="flow-line" width="100%" height="58" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="flowgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0"/>
+            <stop offset="30%" style="stop-color:#00ff88;stop-opacity:0.25"/>
+            <stop offset="70%" style="stop-color:#00dd66;stop-opacity:0.25"/>
+            <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0"/>
+          </linearGradient>
+        </defs>
+        <path id="wave-path" fill="none" stroke="url(#flowgrad)" stroke-width="1.5" opacity="0.35"/>
+        <circle id="flow-dot" r="3" fill="#00ff88" opacity="0.3"/>
+      </svg>
+    </div>
+  </div>
+
+<style>
+@keyframes flow-dash {
+  from { stroke-dashoffset: 120; }
+  to   { stroke-dashoffset: 0; }
+}
+@media(max-width:900px){
+  #flow-wrapper { display: none; }
+  .stpg { display: flex; flex-direction: column; align-items: center; }
+  .stp { padding-bottom: 0; }
+  /* Verticale golvende lijn tussen stappen op mobiel */
+  .stp:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 32px;
+    background: linear-gradient(to bottom, rgba(0,255,136,0.25), rgba(0,221,102,0.25));
+    margin: 8px auto;
+    border-radius: 2px;
+    animation: pulse-green 1.4s ease-in-out infinite;
+  }
+  @keyframes pulse-green {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+}
+</style>
+<script>
+(function(){
+  function drawWave() {
+    if (window.innerWidth <= 900) return; // op mobiel niet nodig
+    var svg = document.getElementById('flow-line');
+    var path = document.getElementById('wave-path');
+    var dot = document.getElementById('flow-dot');
+    if (!svg || !path) return;
+
+    var W = svg.clientWidth || svg.parentElement.clientWidth;
+    if (!W || W < 10) return;
+    var cy = 29;
+    var amp = 6;
+    var freq = 10;
+    var d = 'M 0 ' + cy;
+
+    for (var i = 0; i <= W; i += 2) {
+      var y = cy + Math.sin((i / W) * Math.PI * 2 * freq) * amp;
+      d += ' L ' + i + ' ' + y;
+    }
+    path.setAttribute('d', d);
+    path.style.strokeDasharray = '8 4';
+    path.style.animation = 'flow-dash 1.4s linear infinite';
+
+    var len = path.getTotalLength ? path.getTotalLength() : W;
+    var startTime = null;
+    var duration = 6000;
+    function animDot(ts) {
+      if (!startTime) startTime = ts;
+      var progress = ((ts - startTime) % duration) / duration;
+      if (path.getTotalLength) {
+        var pt = path.getPointAtLength(progress * len);
+        dot.setAttribute('cx', pt.x);
+        dot.setAttribute('cy', pt.y);
+      }
+      requestAnimationFrame(animDot);
+    }
+    requestAnimationFrame(animDot);
+  }
+
+  if (document.readyState === 'complete') { setTimeout(drawWave, 400); }
+  else { window.addEventListener('load', function(){ setTimeout(drawWave, 400); }); }
+  var resizeTimer;
+  window.addEventListener('resize', function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(drawWave, 200);
+  });
+})();
+</script>
+    <!-- Lachend zonnetje -->
+    <div id="sun-animation" style="position:absolute;top:0;left:0;pointer-events:none;z-index:10;width:100%;height:100%">
+      <svg id="flying-sun" width="54" height="54" viewBox="0 0 54 54" style="position:absolute;top:0;left:0;filter:drop-shadow(0 0 8px rgba(232,79,28,0.6))">
+        <!-- Stralen -->
+        <g id="sun-rays" style="transform-origin:27px 27px">
+          <line x1="27" y1="3"  x2="27" y2="10" stroke="#E84F1C" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="27" y1="44" x2="27" y2="51" stroke="#E84F1C" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="3"  y1="27" x2="10" y2="27" stroke="#E84F1C" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="44" y1="27" x2="51" y2="27" stroke="#E84F1C" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="9"  y1="9"  x2="14" y2="14" stroke="#E84F1C" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="40" y1="40" x2="45" y2="45" stroke="#E84F1C" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="45" y1="9"  x2="40" y2="14" stroke="#E84F1C" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="9"  y1="45" x2="14" y2="40" stroke="#E84F1C" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+        <!-- Cirkel -->
+        <circle cx="27" cy="27" r="14" fill="#FFD93D" stroke="#E84F1C" stroke-width="2"/>
+        <!-- Ogen -->
+        <circle cx="22" cy="24" r="2" fill="#1B2B6E"/>
+        <circle cx="32" cy="24" r="2" fill="#1B2B6E"/>
+        <!-- Lach -->
+        <path d="M20 30 Q27 37 34 30" fill="none" stroke="#1B2B6E" stroke-width="2" stroke-linecap="round"/>
+        <!-- Wangetjes -->
+        <circle cx="19" cy="30" r="3" fill="rgba(232,79,28,0.25)"/>
+        <circle cx="35" cy="30" r="3" fill="rgba(232,79,28,0.25)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+#sun-rays {
+  animation: spin-rays 4s linear infinite;
+}
+@keyframes spin-rays {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+</style>
+
+<script>
+(function() {
+  var animFrame = null;
+  var animTimeout = null;
+
+  function animateSun() {
+    // Stop eventuele vorige animatie
+    if (animFrame) { cancelAnimationFrame(animFrame); animFrame = null; }
+    if (animTimeout) { clearTimeout(animTimeout); animTimeout = null; }
+
+    var steps = document.querySelectorAll('#stpg-steps .stp .stpn');
+    var sun = document.getElementById('flying-sun');
+    var container = document.getElementById('sun-animation');
+    if (!steps.length || !sun) return;
+
+    // Herbereken posities op huidig schermformaat
+    var positions = [];
+    var containerRect = container.getBoundingClientRect();
+
+    steps.forEach(function(step) {
+      var r = step.getBoundingClientRect();
+      positions.push({
+        x: r.left - containerRect.left + r.width / 2 - 27,
+        y: r.top  - containerRect.top  + r.height / 2 - 27 - 40
+      });
+    });
+
+    var startTime = null;
+    var segmentDuration = 2200;
+    var pauseDuration   = 600;
+    var totalSteps = positions.length - 1;
+    var litIndex = -1;
+
+    function easeInOut(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    }
+
+    function lightUp(index) {
+      steps.forEach(function(s) {
+        s.style.background = '';
+        s.style.boxShadow = '';
+        s.style.transform = '';
+        s.style.transition = 'background 0.4s, box-shadow 0.4s, transform 0.3s';
+      });
+      if (index >= 0 && index < steps.length) {
+        steps[index].style.background = '#E84F1C';
+        steps[index].style.boxShadow = '0 0 18px 6px rgba(232,79,28,0.6)';
+        steps[index].style.transform = 'scale(1.18)';
+      }
+    }
+
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      var elapsed = ts - startTime;
+      var cycleTime = segmentDuration + pauseDuration;
+      var cycleIndex = Math.floor(elapsed / cycleTime);
+
+      if (cycleIndex >= totalSteps) {
+        if (litIndex !== totalSteps) { litIndex = totalSteps; lightUp(totalSteps); }
+        sun.style.transform = 'translate(' + positions[totalSteps].x + 'px,' + positions[totalSteps].y + 'px)';
+        animTimeout = setTimeout(function() {
+          lightUp(-1);
+          startTime = null;
+          litIndex = -1;
+          animFrame = requestAnimationFrame(step);
+        }, 1200);
+        return;
+      }
+
+      var cycleElapsed = elapsed - cycleIndex * cycleTime;
+      var from = positions[cycleIndex];
+      var to   = positions[cycleIndex + 1];
+      var t, x, y;
+
+      if (cycleElapsed < segmentDuration) {
+        if (litIndex !== cycleIndex) { litIndex = cycleIndex; lightUp(cycleIndex); }
+        t = easeInOut(cycleElapsed / segmentDuration);
+        var arc = Math.sin(t * Math.PI) * -18;
+        x = from.x + (to.x - from.x) * t;
+        y = from.y + (to.y - from.y) * t + arc;
+      } else {
+        if (litIndex !== cycleIndex + 1) { litIndex = cycleIndex + 1; lightUp(cycleIndex + 1); }
+        x = to.x; y = to.y;
+      }
+
+      sun.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      animFrame = requestAnimationFrame(step);
+    }
+
+    animFrame = requestAnimationFrame(step);
+  }
+
+  if (document.readyState === 'complete') {
+    setTimeout(animateSun, 300);
+  } else {
+    window.addEventListener('load', function() { setTimeout(animateSun, 300); });
+  }
+
+  // Herbereken bij resize — cancel vorige en start opnieuw
+  var resizeTimer = null;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(animateSun, 200);
+  });
+})();
+</script>
+
+<!-- foto5 blok -->
+<section style="padding:0 max(5%, calc(50% - 640px)) 0;background:#fff;overflow:hidden">
+  <div style="padding:56px 0 40px 0;background:#fff">
+    <h2 style="color:var(--nvd);margin-bottom:16px;font-size:clamp(22px,4vw,32px)">Hoe de <span>SMILE G3</span> jouw zonne-energiesysteem slimmer maakt</h2>
+    <p style="color:var(--nvd);font-size:16px;line-height:1.8">De SMILE G3 sluit naadloos aan op je zonnepanelen en slaat overtollige energie slim op in de AlphaLinX thuisbatterij. Zo gebruik je de opgeslagen stroom precies wanneer je die nodig hebt. Overdag verhoogt het systeem jouw eigen verbruik van zonne-energie. 's Nachts of bij een stroomstoring schakelt het automatisch over op de thuisbatterij, zodat je woning zonder onderbreking van energie wordt voorzien.</p>
+  </div>
+  <img src="foto5.jpg" alt="AlphaESS SMILE G3 systeem overzicht" style="width:100%;display:block;border-radius:12px"/>
+</section>
+
+<!-- Fotoslider -->
+<section id="slider-section" style="background:#fff;overflow:hidden;box-sizing:border-box">
+  <div style="max-width:900px;margin:0 auto;padding:0 8%">
+    <h2 style="text-align:center;margin-bottom:36px">Specificaties <span>AlphaESS Smile G3</span></h2>
+  </div>
+  <div style="background:#0F1B4D;padding:80px 0 60px 0">
+    <div style="position:relative;overflow:hidden">
+    <div id="slider-track" style="display:flex;transition:transform 0.5s ease;will-change:transform">
+      <!-- Slide 1 -->
+      <div style="min-width:100%;position:relative">
+        <img src="foto11.jpg" alt="AlphaESS Smile G3 specificaties 1" style="width:100%;height:55vw;max-height:620px;min-height:320px;object-fit:contain;display:block;background:#0F1B4D"/>
+      </div>
+      <!-- Slide 2 -->
+      <div style="min-width:100%;position:relative">
+        <img src="foto12.jpg" alt="AlphaESS Smile G3 specificaties 2" style="width:100%;height:55vw;max-height:620px;min-height:320px;object-fit:contain;display:block;background:#0F1B4D"/>
+      </div>
+      <!-- Slide 3 -->
+      <div style="min-width:100%;position:relative">
+        <img src="foto13.jpg" alt="AlphaESS Smile G3 specificaties 3" style="width:100%;height:55vw;max-height:620px;min-height:320px;object-fit:contain;display:block;background:#0F1B4D"/>
+      </div>
+      <!-- Slide 4 -->
+      <div style="min-width:100%;position:relative">
+        <img src="foto14.jpg" alt="AlphaESS Smile G3 specificaties 4" style="width:100%;height:55vw;max-height:620px;min-height:320px;object-fit:contain;display:block;background:#0F1B4D"/>
+      </div>
+    </div>
+    <!-- Pijl links -->
+    <button onclick="sliderMove(-1)" style="position:absolute;top:50%;left:20px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(232,79,28,0.85);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s" onmouseover="this.style.background='#E84F1C'" onmouseout="this.style.background='rgba(232,79,28,0.85)'">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <!-- Pijl rechts -->
+    <button onclick="sliderMove(1)" style="position:absolute;top:50%;right:20px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(232,79,28,0.85);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s" onmouseover="this.style.background='#E84F1C'" onmouseout="this.style.background='rgba(232,79,28,0.85)'">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <!-- Dots -->
+    <div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px" id="slider-dots">
+      <span onclick="sliderGoto(0)" style="width:10px;height:10px;border-radius:50%;background:#E84F1C;cursor:pointer;transition:opacity .2s"></span>
+      <span onclick="sliderGoto(1)" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:opacity .2s"></span>
+      <span onclick="sliderGoto(2)" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:opacity .2s"></span>
+      <span onclick="sliderGoto(3)" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:opacity .2s"></span>
+    </div>
+    </div>
+    <!-- Video knop -->
+    <div style="text-align:center;padding:44px 0 0 0">
+      <button onclick="document.getElementById('video-modal').style.display='flex';var v=document.getElementById('prod-video');v.currentTime=0;v.play()" style="display:inline-flex;align-items:center;gap:10px;background:#E84F1C;color:#fff;border:none;padding:12px 28px;border-radius:4px;font-family:'Barlow',sans-serif;font-size:15px;font-weight:700;cursor:pointer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+        Product video
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Video modal -->
+<div id="video-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.88);z-index:9999;align-items:center;justify-content:center;padding:16px;box-sizing:border-box" onclick="if(event.target===this){this.style.display='none';document.getElementById('prod-video').pause()}">
+  <div style="position:relative;width:100%;max-width:800px">
+    <button onclick="document.getElementById('video-modal').style.display='none';document.getElementById('prod-video').pause()" style="position:absolute;top:-40px;right:0;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1">✕</button>
+    <video id="prod-video" controls playsinline style="width:100%;border-radius:8px;display:block" src="https://www.alphaess.nl/cdn/shop/videos/c/vp/a619b4454fb64a8e87e2e62cf3b73bf1/a619b4454fb64a8e87e2e62cf3b73bf1.HD-720p-3.0Mbps-62435306.mp4?v=0">
+      Je browser ondersteunt geen video.
+    </video>
+  </div>
+</div>
+
+<script>document.getElementById('video-modal');</script>
+  </div>
+</section>
+<script>
+(function(){
+  var current = 0;
+  var total = 4;
+  window.sliderMove = function(dir) {
+    current = (current + dir + total) % total;
+    updateSlider();
+  };
+  window.sliderGoto = function(i) {
+    current = i;
+    updateSlider();
+  };
+  function updateSlider() {
+    document.getElementById('slider-track').style.transform = 'translateX(-' + (current * 100) + '%)';
+    var dots = document.getElementById('slider-dots').children;
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].style.background = i === current ? '#E84F1C' : 'rgba(255,255,255,0.4)';
+    }
+  }
+  // Auto-play elke 4 seconden
+  setInterval(function(){ sliderMove(1); }, 4000);
+})();
+</script>
+
+<div style="background:#fff;height:48px"></div>
+
+<section id="dynamic" class="dyn">
+  <div class="sl">Slim energiebeheer</div>
+  <h2>Profiteer van<br/><span>dynamische energieprijzen</span></h2>
+  <p class="intro">De SMILE-G3 is ideaal voor slim stroom handelen. Laad goedkoop op en gebruik zelf als de prijs hoog is — volledig automatisch.</p>
+  <div class="dg">
+    <div>
+      <div class="di"><div class="dic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><h5>Laden bij lage tarieven</h5><p>Automatisch laden als stroomprijzen laag zijn — 's nachts of op zonnige middagen.</p></div></div>
+      <div class="di"><div class="dic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div><h5>Inzetten bij hoge tarieven</h5><p>Bij piekprijzen gebruikt u automatisch uw opgeslagen energie of levert u terug aan het net.</p></div></div>
+      <div class="di"><div class="dic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><h5>Volledig automatisch</h5><p>Via Frank Energie of vergelijkbare diensten werkt het systeem volledig autonoom.</p></div></div>
+    </div>
+    <div class="fc">
+      <h4>Frank Energie koppeling</h4>
+      <p>De SMILE-G3 koppelt met Frank Energie voor geautomatiseerd slim handelen op basis van uurprijzen.</p>
+      <div class="psim">
+        <div class="pr"><span class="prl">Dal (02:00–06:00)</span><span class="prv low">€ 0,04 / kWh</span></div>
+        <div class="pr"><span class="prl">Normaal (10:00–16:00)</span><span class="prv" style="color:rgba(255,255,255,.75)">€ 0,12 / kWh</span></div>
+        <div class="pr"><span class="prl">Piek (17:00–20:00)</span><span class="prv hi">€ 0,38 / kWh</span></div>
+        <div class="pr" style="margin-top:6px;padding-top:10px;border-top:1px solid rgba(255,255,255,.12)"><span class="prl">Besparing per dag</span><span class="prv sv2">± € 1,70 / dag</span></div>
+      </div>
+      <p style="font-size:11px;color:rgba(255,255,255,.3);margin-top:10px">* Voorbeeldprijzen ter illustratie.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.btw-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:600px){
+  .btw-grid{grid-template-columns:1fr}
+  .sub-banner h3{font-size:24px !important;word-break:break-word}
+}
+</style>
+<section style="padding-top:48px">
+  <div class="sub-banner" style="grid-template-columns:1fr;gap:28px">
+    <div>
+      <h3 style="word-break:break-word;overflow-wrap:break-word">Profiteer van <span>BTW-teruggave</span> en de <span>Energiebespaarlening</span> van het <span>Warmtefonds</span></h3>
+    </div>
+    <div class="btw-grid">
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:24px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <div style="width:36px;height:36px;background:rgba(232,79,28,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><text x="2" y="17" font-family="Arial" font-size="17" font-weight="900" fill="#E84F1C" stroke="none">€</text></svg>
+          </div>
+          <strong style="color:#fff;font-size:16px;font-weight:700">BTW-teruggave 21%</strong>
+        </div>
+        <p style="font-size:14px;color:rgba(255,255,255,.68);line-height:1.7;margin:0">Je kunt in veel gevallen 21% BTW terugvragen bij de Belastingdienst als je de thuisbatterij combineert met een <a href="https://www.belastingdienst.nl/wps/wcm/connect/nl/btw/content/thuisbatterij-btw" style="color:#FF9A6C;text-decoration:underline">dynamisch energiecontract</a>.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:24px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <div style="width:36px;height:36px;background:rgba(232,79,28,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          </div>
+          <strong style="color:#fff;font-size:16px;font-weight:700">Warmtefonds lening</strong>
+        </div>
+        <p style="font-size:14px;color:rgba(255,255,255,.68);line-height:1.7;margin:0">Via de <a href="https://www.warmtefonds.nl" style="color:#FF9A6C;text-decoration:underline">Energiebespaarlening</a> van het Nationaal Warmtefonds kun je maximaal <strong style="color:#FF9A6C">€ 8.500</strong> lenen voor een thuisbatterij, inclusief installatie.</p>
+      </div>
+    </div>
+    <a href="#contact" class="btnp" style="justify-self:start;font-size:15px;padding:15px 30px">Vraag financieringsadvies aan</a>
+  </div>
+</section>
+
+<section class="rev">
+  <div class="sl">Ervaringen van klanten</div>
+  <h2>Wat onze klanten<br/><span>zeggen</span></h2>
+
+  <style>
+    .rev-outer { display: grid; grid-template-columns: 1fr 8px; gap: 16px; align-items: stretch; }
+    .rev-viewport { overflow: hidden; }
+    .rev-scroll { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; transition: transform 0.45s cubic-bezier(.4,0,.2,1); }
+    .rev-scrollbar-track { width: 8px; background: var(--gl); border-radius: 10px; position: relative; cursor: pointer; }
+    .rev-scrollbar-thumb { width: 8px; background: var(--or); border-radius: 10px; position: absolute; top: 0; left: 0; transition: top 0.35s ease; cursor: grab; min-height: 40px; }
+    .rev-nav { display: flex; justify-content: center; gap: 12px; margin-top: 24px; }
+    .rev-nav-btn { background: #fff; border: 2px solid var(--gl); color: var(--nvd); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: background .2s, border-color .2s, color .2s; }
+    .rev-nav-btn:hover { background: var(--or); border-color: var(--or); color: #fff; }
+  </style>
+
+  <div class="rev-outer">
+    <div>
+      <div class="rev-viewport" id="revViewport">
+        <div class="rev-scroll" id="revScroll">
+
+          <div class="rc">
+            <div class="stars"><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <blockquote>"De SMILE-G3 is binnen een week geplaatst en de koppeling met Frank Energie werkt perfect. We leveren nu bijna niets meer terug!"</blockquote>
+            <div class="rv"><div class="rva" style="background:#1B2B6E">JV</div><div><div class="rvn">Jan &amp; Lies V.</div><div class="rvl">Helmond — SMILE-G3 &middot; 9,3 kWh</div></div></div>
+          </div>
+
+          <div class="rc">
+            <div class="stars"><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <blockquote>"Begonnen met 1 module en al uitgebreid naar 20,2 kWh. Geweldig hoe eenvoudig dat gaat. VDV heeft alles professioneel geregeld."</blockquote>
+            <div class="rv"><div class="rva" style="background:#253580">MP</div><div><div class="rvn">Marc &amp; Petra</div><div class="rvl">Eindhoven — SMILE-G3 &middot; 20,2 kWh</div></div></div>
+          </div>
+
+          <div class="rc">
+            <div class="stars"><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <blockquote>"IP65 dus buiten aan de schuur gemonteerd. Na 8 maanden al meer dan 1.200 kWh opgeslagen — schitterende investering!"</blockquote>
+            <div class="rv"><div class="rva" style="background:#E84F1C">SD</div><div><div class="rvn">Sandra D.</div><div class="rvl">Venlo — SMILE-G3 &middot; buiten</div></div></div>
+          </div>
+
+          <div class="rc">
+            <div class="stars"><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <blockquote>"Fantastische service van VDV! De installateur legde alles helder uit en de batterij werkt al maanden foutloos."</blockquote>
+            <div class="rv"><div class="rva" style="background:#1a9a4a">RB</div><div><div class="rvn">Roel B.</div><div class="rvl">Den Bosch — SMILE-G3 &middot; 9,3 kWh</div></div></div>
+          </div>
+
+          <div class="rc">
+            <div class="stars"><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <blockquote>"Combinatie met onze laadpaal werkt perfect. Energierekening gehalveerd in de eerste twee maanden!"</blockquote>
+            <div class="rv"><div class="rva" style="background:#0F1B4D">KV</div><div><div class="rvn">Karin &amp; Tom V.</div><div class="rvl">Tilburg — SMILE-G3 &middot; 20,2 kWh</div></div></div>
+          </div>
+
+          <div class="rc">
+            <div class="stars"><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <blockquote>"Drie modules geplaatst voor ons bedrijfspand. Installatie vlekkeloos, VDV denkt écht mee over de optimale configuratie."</blockquote>
+            <div class="rv"><div class="rva" style="background:#253580">PH</div><div><div class="rvn">Peter H.</div><div class="rvl">Breda — SMILE-G3 &middot; 30,3 kWh</div></div></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="rev-nav">
+        <button class="rev-nav-btn" id="revPrev">&#8593;</button>
+        <button class="rev-nav-btn" id="revNext">&#8595;</button>
+      </div>
+    </div>
+
+    <div class="rev-scrollbar-track" id="revTrack">
+      <div class="rev-scrollbar-thumb" id="revThumb"></div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var viewport = document.getElementById('revViewport');
+    var grid     = document.getElementById('revScroll');
+    var thumb    = document.getElementById('revThumb');
+    var track    = document.getElementById('revTrack');
+    var cards    = grid.querySelectorAll('.rc');
+    var cols     = 2;
+    var visRows  = 2;
+    var total    = cards.length;
+    var totalRows = Math.ceil(total / cols);
+    var maxStep  = totalRows - visRows;
+    var current  = 0;
+
+    function rowH() {
+      return cards[0].offsetHeight + 20;
+    }
+
+    function setViewportH() {
+      viewport.style.height = (visRows * rowH() - 20) + 'px';
+      track.style.height = viewport.offsetHeight + 'px';
+    }
+
+    function thumbH() {
+      var ratio = visRows / totalRows;
+      return Math.max(40, track.offsetHeight * ratio);
+    }
+
+    function update() {
+      if (current < 0) current = 0;
+      if (current > maxStep) current = maxStep;
+      grid.style.transform = 'translateY(-' + (current * rowH()) + 'px)';
+      var ratio = maxStep > 0 ? current / maxStep : 0;
+      var maxTop = track.offsetHeight - thumbH();
+      thumb.style.height = thumbH() + 'px';
+      thumb.style.top = (ratio * maxTop) + 'px';
+    }
+
+    document.getElementById('revPrev').onclick = function(){ current--; update(); };
+    document.getElementById('revNext').onclick = function(){ current++; update(); };
+
+    track.addEventListener('click', function(e){
+      var rect = track.getBoundingClientRect();
+      var ratio = (e.clientY - rect.top) / track.offsetHeight;
+      current = Math.round(ratio * maxStep);
+      update();
+    });
+
+    var dragging = false, dragStart = 0, dragFrom = 0;
+    thumb.addEventListener('mousedown', function(e){ dragging=true; dragStart=e.clientY; dragFrom=current; e.preventDefault(); });
+    document.addEventListener('mousemove', function(e){
+      if(!dragging) return;
+      var delta = e.clientY - dragStart;
+      var maxTop = track.offsetHeight - thumbH();
+      current = Math.round(dragFrom + (delta / maxTop) * maxStep);
+      update();
+    });
+    document.addEventListener('mouseup', function(){ dragging=false; });
+
+    setTimeout(function(){ setViewportH(); update(); }, 150);
+    window.addEventListener('resize', function(){ setTimeout(function(){ setViewportH(); update(); }, 150); });
+  })();
+  </script>
+</section>
+
+<section id="business-case" style="padding:76px max(5%, calc(50% - 640px));background:var(--nvd)">
+  <div class="sl" style="color:rgba(232,79,28,.9)">Financiële onderbouwing</div>
+  <h2 style="color:#fff">Business Case <span>Thuisbatterij met EMS</span></h2>
+  <p class="intro" style="color:rgba(255,255,255,.6)">Berekening op basis van een dynamisch contract (2027). U kunt hier zelf alle waarden invoeren om zo specifiek uw eigen situatie duidelijk zichtbaar te maken.</p>
+
+  <!-- CALCULATOR LAYOUT -->
+  <div id="bc-main-grid" style="display:grid;grid-template-columns:1fr 1.3fr;gap:32px;align-items:start">
+
+    <!-- LINKER KOLOM: Invoervelden -->
+    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden">
+      <div style="background:rgba(232,79,28,.15);border-bottom:1px solid rgba(232,79,28,.3);padding:18px 24px;display:flex;align-items:center;gap:12px">
+        <div style="width:36px;height:36px;background:var(--or);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <div>
+          <p style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:#fff;line-height:1">Vul uw situatie in</p>
+          <span style="font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.5px">Klant- &amp; systeemspecificaties</span>
+        </div>
+      </div>
+      <div style="padding:24px;display:flex;flex-direction:column;gap:14px">
+
+        <!-- C8: Naam -->
+        <div>
+          <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;display:block;margin-bottom:6px">Naam klant</label>
+          <input id="c8" type="text" value="Familie Jansen" oninput="calcBC()"
+            style="width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:8px;padding:11px 14px;font-size:14px;font-weight:600;color:#fff;outline:none;box-sizing:border-box;transition:border-color .2s"
+            onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='rgba(255,255,255,.15)'" placeholder="Naam prospect"/>
+        </div>
+
+        <!-- C9: Jaarlijks verbruik -->
+        <div>
+          <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;display:block;margin-bottom:6px">Jaarlijks verbruik (kWh)</label>
+          <div style="display:flex;align-items:stretch;gap:6px">
+            <button type="button" onclick="stepField('c9',-100)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">−</button>
+            <div style="position:relative;flex:1">
+              <input id="c9" type="number" value="4500" min="0" oninput="calcBC()"
+                style="width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:8px;padding:11px 42px 11px 14px;font-size:14px;font-weight:600;color:#fff;outline:none;box-sizing:border-box;transition:border-color .2s"
+                onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='rgba(255,255,255,.15)'"/>
+              <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:12px;color:rgba(255,255,255,.35);font-weight:600;pointer-events:none">kWh</span>
+            </div>
+            <button type="button" onclick="stepField('c9',100)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">+</button>
+          </div>
+        </div>
+
+        <!-- C10: Zonnepanelen opwek -->
+        <div>
+          <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;display:block;margin-bottom:6px">Jaarlijkse opwek zonnepanelen (kWh)</label>
+          <div style="display:flex;align-items:stretch;gap:6px">
+            <button type="button" onclick="stepField('c10',-100)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">−</button>
+            <div style="position:relative;flex:1">
+              <input id="c10" type="number" value="4500" min="0" oninput="calcBC()"
+                style="width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:8px;padding:11px 42px 11px 14px;font-size:14px;font-weight:600;color:#fff;outline:none;box-sizing:border-box;transition:border-color .2s"
+                onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='rgba(255,255,255,.15)'"/>
+              <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:12px;color:rgba(255,255,255,.35);font-weight:600;pointer-events:none">kWh</span>
+            </div>
+            <button type="button" onclick="stepField('c10',100)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">+</button>
+          </div>
+        </div>
+
+        <!-- C11: Elektriciteitsprijs -->
+        <div>
+          <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;display:block;margin-bottom:6px">Gem. elektriciteitsprijs (€/kWh)</label>
+          <div style="display:flex;align-items:stretch;gap:6px">
+            <button type="button" onclick="stepField('c11',-0.01)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">−</button>
+            <div style="position:relative;flex:1">
+              <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:14px;color:rgba(255,255,255,.5);font-weight:700;pointer-events:none">€</span>
+              <input id="c11" type="number" value="0.30" min="0" step="0.01" oninput="calcBC()"
+                style="width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:8px;padding:11px 14px 11px 28px;font-size:14px;font-weight:600;color:#fff;outline:none;box-sizing:border-box;transition:border-color .2s"
+                onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='rgba(255,255,255,.15)'"/>
+            </div>
+            <button type="button" onclick="stepField('c11',0.01)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">+</button>
+          </div>
+        </div>
+
+        <!-- C12: Terugleververgoeding -->
+        <div>
+          <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;display:block;margin-bottom:6px">Terugleververgoeding (€/kWh)</label>
+          <div style="display:flex;align-items:stretch;gap:6px">
+            <button type="button" onclick="stepField('c12',-0.01)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">−</button>
+            <div style="position:relative;flex:1">
+              <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:14px;color:rgba(255,255,255,.5);font-weight:700;pointer-events:none">€</span>
+              <input id="c12" type="number" value="0.05" min="0" step="0.01" oninput="calcBC()"
+                style="width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:8px;padding:11px 14px 11px 28px;font-size:14px;font-weight:600;color:#fff;outline:none;box-sizing:border-box;transition:border-color .2s"
+                onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='rgba(255,255,255,.15)'"/>
+            </div>
+            <button type="button" onclick="stepField('c12',0.01)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">+</button>
+          </div>
+        </div>
+
+        <!-- C13: Batterijcapaciteit -->
+        <div>
+          <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;display:block;margin-bottom:6px">Capaciteit thuisbatterij (kWh)</label>
+          <div style="display:flex;align-items:stretch;gap:6px">
+            <button type="button" onclick="stepField('c13',-1)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">−</button>
+            <div style="position:relative;flex:1">
+              <input id="c13" type="number" value="10" min="0" oninput="calcBC()"
+                style="width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:8px;padding:11px 42px 11px 14px;font-size:14px;font-weight:600;color:#fff;outline:none;box-sizing:border-box;transition:border-color .2s"
+                onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='rgba(255,255,255,.15)'"/>
+              <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:12px;color:rgba(255,255,255,.35);font-weight:600;pointer-events:none">kWh</span>
+            </div>
+            <button type="button" onclick="stepField('c13',1)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">+</button>
+          </div>
+        </div>
+
+        <!-- C14: Aanschafkosten -->
+        <div>
+          <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;display:block;margin-bottom:6px">Aanschafkosten incl. montage incl. BTW (€)</label>
+          <div style="display:flex;align-items:stretch;gap:6px">
+            <button type="button" onclick="stepField('c14',-100)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">−</button>
+            <div style="position:relative;flex:1">
+              <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:14px;color:rgba(255,255,255,.5);font-weight:700;pointer-events:none">€</span>
+              <input id="c14" type="number" value="7000" min="0" step="100" oninput="calcBC()"
+                style="width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:8px;padding:11px 14px 11px 28px;font-size:14px;font-weight:600;color:#fff;outline:none;box-sizing:border-box;transition:border-color .2s"
+                onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='rgba(255,255,255,.15)'"/>
+            </div>
+            <button type="button" onclick="stepField('c14',100)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">+</button>
+          </div>
+        </div>
+
+        <!-- C15: Dynamisch contract -->
+        <div>
+          <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;display:block;margin-bottom:10px">Dynamisch contract via Frank Energie?</label>
+          <div style="display:flex;gap:10px">
+            <label id="c15-ja-label" onclick="setDynamic(1)" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--or);border:1.5px solid var(--or);border-radius:8px;padding:11px;cursor:pointer;font-size:14px;font-weight:700;color:#fff;transition:all .2s">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ja
+            </label>
+            <label id="c15-nee-label" onclick="setDynamic(0)" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.15);border-radius:8px;padding:11px;cursor:pointer;font-size:14px;font-weight:700;color:rgba(255,255,255,.5);transition:all .2s">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Nee
+            </label>
+          </div>
+          <input id="c15" type="hidden" value="1"/>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RECHTER KOLOM: Resultaten -->
+    <div style="display:flex;flex-direction:column;gap:20px">
+
+      <!-- KPI Blokken -->
+      <div id="bc-kpi-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div style="background:#fff;border-radius:14px;padding:22px 20px;border-left:4px solid #16a34a;box-shadow:0 4px 20px rgba(0,0,0,.15)">
+          <div id="res-netto-jaar" style="font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:800;color:#16a34a;line-height:1">€ 0</div>
+          <div style="font-size:12px;color:var(--gr);margin-top:5px;text-transform:uppercase;letter-spacing:.5px">Netto opbrengst / jaar met Thuisbatterij</div>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:22px 20px;border-left:4px solid var(--nv);box-shadow:0 4px 20px rgba(0,0,0,.15)">
+          <div id="res-tvt" style="font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:800;color:var(--nv);line-height:1">— jr</div>
+          <div style="font-size:12px;color:var(--gr);margin-top:5px;text-transform:uppercase;letter-spacing:.5px">Terugverdientijd</div>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:22px 20px;border-left:4px solid #4ade80;box-shadow:0 4px 20px rgba(0,0,0,.15)">
+          <div id="res-winst-20" style="font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:800;color:#16a34a;line-height:1">€ 0</div>
+          <div style="font-size:12px;color:var(--gr);margin-top:5px;text-transform:uppercase;letter-spacing:.5px">Netto winst over 15 jaar</div>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:22px 20px;border-left:4px solid rgba(232,79,28,.4);box-shadow:0 4px 20px rgba(0,0,0,.15)">
+          <div id="res-nadeel" style="font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:800;color:#dc2626;line-height:1">€ 0</div>
+          <div style="font-size:12px;color:var(--gr);margin-top:5px;text-transform:uppercase;letter-spacing:.5px">Kosten van niets doen (15j)</div>
+        </div>
+      </div>
+
+      <!-- Scenario vergelijking tabel -->
+      <div style="background:#fff;border-radius:14px;border:1.5px solid var(--gl);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.15)">
+        <div style="background:var(--nvd);padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.08)">
+          <p style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:#fff">Scenariovergelijking (15 jaar)</p>
+          <span style="font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.5px">Kosten zonder vs. winst met AlphaESS</span>
+        </div>
+        <table style="width:100%;border-collapse:collapse">
+          <tr style="border-bottom:1px solid var(--gl);background:rgba(248,113,113,.04)">
+            <td style="padding:10px 18px;font-size:13px;color:var(--gr);width:62%">Scenario 1: geen panelen, niets doen</td>
+            <td id="res-s1" style="padding:10px 18px;font-size:13px;font-weight:700;color:#dc2626">€ 0</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--gl);background:rgba(248,113,113,.02)">
+            <td style="padding:10px 18px;font-size:13px;color:var(--gr)">Scenario 2: wel panelen, niets doen</td>
+            <td id="res-s2" style="padding:10px 18px;font-size:13px;font-weight:700;color:#ea580c">€ 0</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--gl)">
+            <td style="padding:10px 18px;font-size:13px;color:var(--gr)">Direct eigen verbruik met batterij (95%)</td>
+            <td id="res-eigen" style="padding:10px 18px;font-size:13px;font-weight:700;color:var(--nvd)">0 kWh</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--gl)">
+            <td style="padding:10px 18px;font-size:13px;color:var(--gr)">Onbalansmarkt opbrengst / jaar</td>
+            <td id="res-ems" style="padding:10px 18px;font-size:13px;font-weight:700;color:#16a34a">€ 0</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--gl);background:rgba(22,163,74,.06)">
+            <td style="padding:10px 18px;font-size:13px;font-weight:700;color:var(--nvd)">Netto winst met AlphaESS (15 jaar)</td>
+            <td id="res-winst-tabel" style="padding:10px 18px;font-size:14px;font-weight:800;color:#16a34a">€ 0</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--gl);background:rgba(232,79,28,.05)">
+            <td style="padding:10px 18px;font-size:13px;font-weight:700;color:var(--nvd)">Financieel voordeel vs. Scenario 1</td>
+            <td id="res-voordeel-s1" style="padding:10px 18px;font-size:14px;font-weight:800;color:#16a34a">€ 0</td>
+          </tr>
+          <tr style="background:rgba(232,79,28,.05)">
+            <td style="padding:10px 18px;font-size:13px;font-weight:700;color:var(--nvd)">Financieel voordeel vs. Scenario 2</td>
+            <td id="res-voordeel" style="padding:10px 18px;font-size:14px;font-weight:800;color:#16a34a">€ 0</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Disclaimer -->
+      <p style="font-size:12px;color:rgba(255,255,255,.35);text-align:center;line-height:1.6">* Berekening is indicatief en gebaseerd op gemiddelde historische marktopbrengsten (dynamisch contract, 2027). Bedragen zijn exclusief BTW tenzij anders vermeld. Werkelijke resultaten kunnen afwijken.</p>
+    </div>
+  </div>
+
+  <!-- Overtuigingstekst -->
+  <div id="bc-overtuiging" style="margin-top:48px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-left:4px solid var(--or);border-radius:14px;padding:36px 40px">
+    <p style="font-size:16px;color:rgba(255,255,255,.88);line-height:1.9;font-weight:400">
+      Laten wij eerlijk zijn: de batterij stort geen
+      <strong style="color:var(--or)" id="txt-nadeel1">€ 0</strong>
+      aan winst op uw bankrekening. Wat de batterij wél doet, is uw vermogen beschermen.
+    </p>
+    <p style="font-size:16px;color:rgba(255,255,255,.88);line-height:1.9;margin-top:16px">
+      Als u niks doet vanaf 2027, lekt er door de nieuwe regels en terugleverboetes de komende 20 jaar zo'n
+      <strong style="color:#f87171" id="txt-s2">€ 0</strong>
+      uit uw portemonnee. Dat geld bent u sowieso kwijt aan uw energieleverancier.*
+    </p>
+    <p style="font-size:16px;color:rgba(255,255,255,.88);line-height:1.9;margin-top:16px">
+      Als u nu kiest voor de AlphaESS en Frank Energie, voorkomt u die kosten én bouwt u een netto winst op van zo'n
+      <strong style="color:#4ade80" id="txt-winst">€ 0</strong>.
+      Het verschil tussen nú instappen of uw geld laten weglekken naar de energiemaatschappij is onder de streep dus
+      <strong style="color:var(--or)" id="txt-nadeel2">€ 0</strong>.
+    </p>
+  </div>
+
+  <script>
+  (function(){
+    // Referentiedata (Sheet 2 vaste parameters)
+    var EIGEN_ZONDER = 0.30;   // Direct eigen verbruik zonder batterij
+    var EIGEN_MET    = 0.95;   // Direct eigen verbruik met batterij
+    var CYCLI        = 400;    // Onbalans cycli per jaar
+    var SPREAD       = 0.17;   // Gemiddelde spread onbalansmarkt €/kWh
+    var RENDEMENT    = 0.95;   // Efficiëntie batterij round-trip
+    var JAREN        = 15;     // Levensduur
+    var BTW          = 0.21;
+    var TERUGLEVER_BOETE = 300; // Vaste schatting terugleverkosten per jaar
+
+    window.setDynamic = function(val){
+      document.getElementById('c15').value = val;
+      var ja  = document.getElementById('c15-ja-label');
+      var nee = document.getElementById('c15-nee-label');
+      if(val === 1){
+        ja.style.background  = 'var(--or)';
+        ja.style.borderColor = 'var(--or)';
+        ja.style.color       = '#fff';
+        nee.style.background  = 'rgba(255,255,255,.07)';
+        nee.style.borderColor = 'rgba(255,255,255,.15)';
+        nee.style.color       = 'rgba(255,255,255,.5)';
+      } else {
+        nee.style.background  = 'var(--or)';
+        nee.style.borderColor = 'var(--or)';
+        nee.style.color       = '#fff';
+        ja.style.background   = 'rgba(255,255,255,.07)';
+        ja.style.borderColor  = 'rgba(255,255,255,.15)';
+        ja.style.color        = 'rgba(255,255,255,.5)';
+      }
+      calcBC();
+    };
+
+    function fmt(n){ return '€\u00a0' + Math.round(n).toLocaleString('nl-NL'); }
+    function fmtKwh(n){ return Math.round(n).toLocaleString('nl-NL') + '\u00a0kWh'; }
+
+    window.calcBC = function(){
+      // Invoervelden C8-C15
+      var C9  = parseFloat(document.getElementById('c9').value)  || 0;  // jaarlijks verbruik
+      var C10 = parseFloat(document.getElementById('c10').value) || 0;  // opwek zonnepanelen
+      var C11 = parseFloat(document.getElementById('c11').value) || 0;  // elektriciteitsprijs
+      var C12 = parseFloat(document.getElementById('c12').value) || 0;  // terugleververgoeding
+      var C13 = parseFloat(document.getElementById('c13').value) || 0;  // batterijcapaciteit
+      var C14 = parseFloat(document.getElementById('c14').value) || 0;  // aanschaf incl BTW
+      var C15 = parseInt(document.getElementById('c15').value)   || 0;  // dynamisch contract
+
+      // Referentiedata (Sheet 2) — exacte vaste waarden
+      var REF_C6  = EIGEN_ZONDER;  // 0.30
+      var REF_C7  = EIGEN_MET;     // 0.90
+      var REF_C8  = C9 - C10;      // verbruik - opwek (C8 sheet2: =C9-C10)
+      var REF_C9  = CYCLI;         // 400
+      var REF_C10 = SPREAD;        // 0.17
+      var REF_C11 = RENDEMENT;     // 0.95
+      var REF_C12 = JAREN;         // 20
+      var REF_C13 = BTW;           // 0.21
+      var REF_C14 = TERUGLEVER_BOETE; // 300
+
+      // ---- SCENARIO 1: =C9*C11  en  =C20*REF_C12 ----
+      var C20 = C9 * C11;
+      var C21 = C20 * REF_C12;
+
+      // ---- SCENARIO 2 ----
+      // C24 = C10*0.3
+      var C24 = C10 * 0.3;
+      // C25 = C10*0.7 + REF_C8   (REF_C8 = C9-C10)
+      var C25 = C10 * 0.7 + REF_C8;
+      // C26 = C25*C11
+      var C26 = C25 * C11;
+      // C27 = C25*C12
+      var C27 = C25 * C12;
+      // C28 = C26 - C27 + REF_C14
+      var C28 = C26 - C27 + REF_C14;
+      // C29 = C28 * REF_C12
+      var C29 = C28 * REF_C12;
+
+      // ---- MET ALPHAESS ----
+      // C32 = (C10*(REF_C7-REF_C6)*(C11-C12)) + IF(C15=1, C13*REF_C9*REF_C10*REF_C11, 0)
+      var emsOpbrengst = (C15 === 1) ? C13 * REF_C9 * REF_C10 * REF_C11 : 0;
+      var C32 = (C10 * (REF_C7 - REF_C6) * (C11 - C12)) + emsOpbrengst;
+
+      // C33 = (C32*REF_C12) - IF(C15=1, C14/(1+REF_C13), C14)
+      var investering = (C15 === 1) ? C14 / (1 + REF_C13) : C14;
+      var C33 = (C32 * REF_C12) - investering;
+
+      // Terugverdientijd: investering / jaaropbrengst
+      var nettoJaar   = C32;
+      var winst20     = C33;
+      var s1Totaal    = C21;
+      var s2Totaal    = C29;
+      var eigenVerbruikMet = C10 * REF_C7;
+
+      // C36 = C29 + C33  (kosten niets doen S2 + gemiste winst)
+      var nadeelS2 = C29 + C33;
+
+      // Terugverdientijd
+      var aanschafExclBtw = (C15 === 1) ? C14 / (1 + REF_C13) : C14;
+      var tvt = nettoJaar > 0 ? aanschafExclBtw / nettoJaar : Infinity;
+
+      // Update DOM
+      document.getElementById('res-netto-jaar').textContent = fmt(nettoJaar);
+      document.getElementById('res-tvt').textContent        = nettoJaar > 0 ? (Math.round(tvt * 10) / 10).toFixed(1).replace('.',',') + '\u00a0jr' : '—';
+      document.getElementById('res-winst-20').textContent   = fmt(winst20);
+      document.getElementById('res-nadeel').textContent     = fmt(nadeelS2);
+      document.getElementById('res-s1').textContent         = fmt(s1Totaal);
+      document.getElementById('res-s2').textContent         = fmt(s2Totaal);
+      document.getElementById('res-eigen').textContent      = fmtKwh(eigenVerbruikMet);
+      document.getElementById('res-ems').textContent        = (C15 === 1) ? fmt(emsOpbrengst) : '—\u00a0(geen dyn. contract)';
+      document.getElementById('res-winst-tabel').textContent= fmt(winst20);
+      document.getElementById('res-voordeel-s1').textContent = fmt(s1Totaal + winst20);
+      document.getElementById('res-voordeel').textContent   = fmt(s2Totaal + winst20);
+
+      // Overtuigingstekst
+      document.getElementById('txt-nadeel1').textContent = fmt(nadeelS2);
+      document.getElementById('txt-s2').textContent      = fmt(s2Totaal);
+      document.getElementById('txt-winst').textContent   = fmt(winst20);
+      document.getElementById('txt-nadeel2').textContent = fmt(nadeelS2);
+    };
+
+    // +/− knop functie
+    window.stepField = function(id, delta){
+      var el = document.getElementById(id);
+      var val = parseFloat(el.value) || 0;
+      var nieuw = Math.max(0, Math.round((val + delta) * 1000) / 1000);
+      el.value = nieuw;
+      calcBC();
+    };
+
+    // Enter-toets navigeert naar volgend invoerveld
+    var volgorde = ['c8','c9','c10','c11','c12','c13','c14'];
+    volgorde.forEach(function(id, i){
+      var el = document.getElementById(id);
+      if(!el) return;
+      el.addEventListener('keydown', function(e){
+        if(e.key === 'Enter'){
+          e.preventDefault();
+          var volgende = volgorde[i + 1];
+          if(volgende){
+            document.getElementById(volgende).focus();
+          } else {
+            // Laatste veld: focus op Ja/Nee knop
+            document.getElementById('c15-ja-label').focus();
+          }
+        }
+      });
+    });
+
+    // Eerste berekening bij laden
+    calcBC();
+  })();
+  </script>
+</section>
+
+<section id="contact" class="cont">
+  <div class="sl" style="color:rgba(255,255,255,.4)">Neem contact op</div>
+  <h2>Vraag een gratis<br/><span>offerte aan</span></h2>
+  <div class="cg">
+    <div>
+      <p style="color:rgba(255,255,255,.65);font-size:16px;margin-bottom:32px;line-height:1.75">Binnen 2 werkdagen belt een adviseur u terug. Wij bepalen samen hoeveel modules optimaal zijn voor uw situatie.</p>
+      <div class="cii"><div class="cic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 011 2.91 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91A16 16 0 0015.1 16.9l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><h5>Telefoon</h5><p>0652021982</p></div></div>
+      <div class="cii"><div class="cic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h5>E-mail</h5><p>info@vdvinstallaties.nl</p></div></div>
+      <div class="cii"><div class="cic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h5>Adres</h5><p>Helmond, Noord-Brabant</p></div></div>
+    </div>
+    <!-- 4-stappen wizard -->
+    <div style="background:#fff;border-radius:16px;overflow:hidden;color:#1B2B6E;min-width:0;box-shadow:0 4px 24px rgba(0,0,0,.12)">
+
+      <!-- Header -->
+      <div style="background:linear-gradient(135deg,#1B2B6E,#253580);padding:20px 28px;display:flex;align-items:center;gap:16px">
+        <div style="width:44px;height:44px;background:rgba(232,79,28,.25);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:#fff;line-height:1.1">Offerte Aanvragen</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:2px">AlphaESS SMILE-G3 Thuisbatterij</div>
+        </div>
+      </div>
+
+      <!-- Voortgangsbalk -->
+      <div style="padding:20px 28px 0">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+          <span style="font-size:12px;font-weight:700;color:#E84F1C" id="wiz-staplabel">Stap 1 van 4 — Uw situatie</span>
+        </div>
+        <div style="background:#eee;border-radius:100px;height:5px;overflow:hidden">
+          <div id="wiz-progress" style="height:100%;background:#E84F1C;border-radius:100px;transition:width .4s;width:25%"></div>
+        </div>
+      </div>
+
+      <!-- Stap 1: Situatie -->
+      <div id="wiz-step1" style="padding:24px 28px">
+        <h3 style="font-size:20px;font-weight:800;color:#1B2B6E;margin-bottom:6px">Hoeveel modules wilt u?</h3>
+        <p style="font-size:13px;color:#888;margin-bottom:18px">Kies het aantal batterijmodules van 9,3 kWh per stuk.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px" id="wiz-modules">
+          <div class="wiz-opt" data-val="9,3 kWh — 1 module" onclick="wizSelect(this,'wiz-modules')" style="border:2px solid #eee;border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:all .2s;background:#fff">
+            <div style="font-size:28px;font-weight:800;color:#1B2B6E">1</div>
+            <div style="font-size:13px;color:#888">module — 9,3 kWh</div>
+          </div>
+          <div class="wiz-opt" data-val="20,2 kWh — 2 modules" onclick="wizSelect(this,'wiz-modules')" style="border:2px solid #eee;border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:all .2s;background:#fff">
+            <div style="font-size:28px;font-weight:800;color:#1B2B6E">2</div>
+            <div style="font-size:13px;color:#888">modules — 20,2 kWh</div>
+          </div>
+          <div class="wiz-opt" data-val="30,3 kWh — 3 modules" onclick="wizSelect(this,'wiz-modules')" style="border:2px solid #eee;border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:all .2s;background:#fff">
+            <div style="font-size:28px;font-weight:800;color:#1B2B6E">3</div>
+            <div style="font-size:13px;color:#888">modules — 30,3 kWh</div>
+          </div>
+          <div class="wiz-opt" data-val="Weet ik nog niet — graag advies" onclick="wizSelect(this,'wiz-modules')" style="border:2px solid #eee;border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:all .2s;background:#fff">
+            <div style="font-size:22px;font-weight:800;color:#1B2B6E">?</div>
+            <div style="font-size:13px;color:#888">Weet ik nog niet</div>
+          </div>
+        </div>
+
+        <!-- Noodstroompakket -->
+        <div style="margin-bottom:16px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#888;margin-bottom:10px">Noodstroompakket (AlphaESS Backup Box)?</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" id="wiz-nood">
+            <div class="wiz-opt" data-val="Ja, noodstroompakket gewenst" onclick="wizSelect(this,'wiz-nood')" style="border:2px solid #eee;background:#fff;border-radius:8px;padding:13px;text-align:center;cursor:pointer;transition:all .2s;font-weight:700;color:#888;font-size:14px">
+              ✓ Ja, graag
+            </div>
+            <div class="wiz-opt" data-val="Geen noodstroompakket" onclick="wizSelect(this,'wiz-nood')" style="border:2px solid #eee;background:#fff;border-radius:8px;padding:13px;text-align:center;cursor:pointer;transition:all .2s;font-weight:700;color:#888;font-size:14px">
+              × Nee
+            </div>
+          </div>
+        </div>
+
+        <!-- Zonnepanelen dropdown -->
+        <div style="margin-bottom:20px">
+          <div style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#888;margin-bottom:8px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Heeft u al zonnepanelen?
+          </div>
+          <select id="wiz-zonnepanelen" onchange="wizCheckStep1()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px 14px;font-size:14px;color:#1B2B6E;font-family:'Barlow',sans-serif;outline:none;background:#fff;cursor:pointer;transition:border-color .2s" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'">
+            <option value="">Maak een keuze...</option>
+            <option value="Ja, zonnepanelen aanwezig">Ja, ik heb zonnepanelen</option>
+            <option value="Nee, geen zonnepanelen">Nee, nog geen zonnepanelen</option>
+            <option value="Nee, maar wel interesse">Nee, maar ik ben geïnteresseerd</option>
+          </select>
+        </div>
+
+        <button onclick="wizNext(2)" id="wiz-next1" style="width:100%;background:#E84F1C;opacity:.5;color:#fff;border:none;border-radius:8px;padding:14px;font-size:15px;font-weight:800;cursor:not-allowed;transition:all .2s">Volgende →</button>
+      </div>
+
+      <!-- Stap 2: Wanneer -->
+      <div id="wiz-step2" style="display:none;padding:24px 28px">
+        <h3 style="font-size:20px;font-weight:800;color:#1B2B6E;margin-bottom:20px">Wanneer wil je de batterij laten installeren?</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px" id="wiz-timing">
+          <div class="wiz-opt" data-val="Zo snel mogelijk" onclick="wizSelect(this,'wiz-timing')" style="border:2px solid #eee;border-radius:10px;padding:14px 18px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span style="font-weight:600;color:#1B2B6E">Zo snel mogelijk</span>
+            <div style="margin-left:auto;width:18px;height:18px;border-radius:50%;border:2px solid #ddd" class="wiz-radio"></div>
+          </div>
+          <div class="wiz-opt" data-val="Binnen 1-3 maanden" onclick="wizSelect(this,'wiz-timing')" style="border:2px solid #eee;border-radius:10px;padding:14px 18px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span style="font-weight:600;color:#1B2B6E">Binnen 1-3 maanden</span>
+            <div style="margin-left:auto;width:18px;height:18px;border-radius:50%;border:2px solid #ddd" class="wiz-radio"></div>
+          </div>
+          <div class="wiz-opt" data-val="Geen haast" onclick="wizSelect(this,'wiz-timing')" style="border:2px solid #eee;border-radius:10px;padding:14px 18px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span style="font-weight:600;color:#1B2B6E">Geen haast</span>
+            <div style="margin-left:auto;width:18px;height:18px;border-radius:50%;border:2px solid #ddd" class="wiz-radio"></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <button onclick="wizBack(1)" style="background:transparent;border:2px solid #ddd;border-radius:8px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;color:#1B2B6E">← Vorige</button>
+          <button onclick="wizNext(3)" id="wiz-next2" style="background:#E84F1C;opacity:.5;color:#fff;border:none;border-radius:8px;padding:14px;font-size:15px;font-weight:800;cursor:not-allowed;transition:all .2s">Volgende →</button>
+        </div>
+      </div>
+
+      <!-- Stap 3: Adres -->
+      <div id="wiz-step3" style="display:none;padding:24px 28px">
+        <h3 style="font-size:20px;font-weight:800;color:#1B2B6E;margin-bottom:20px">Wat is je adres?</h3>
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:12px">
+          <div>
+            <label style="font-size:12px;font-weight:700;color:#888;display:block;margin-bottom:6px">Postcode</label>
+            <input id="wiz-postcode" type="text" placeholder="0000 PP" oninput="wizCheckStep3()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px;font-size:15px;color:#1B2B6E;outline:none;box-sizing:border-box;transition:border-color .2s" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'"/>
+          </div>
+          <div>
+            <label style="font-size:12px;font-weight:700;color:#888;display:block;margin-bottom:6px">Huisnummer</label>
+            <input id="wiz-huisnr" type="text" placeholder="22" oninput="wizCheckStep3()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px;font-size:15px;color:#1B2B6E;outline:none;box-sizing:border-box;transition:border-color .2s" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'"/>
+          </div>
+        </div>
+        <!-- Adres resultaat -->
+        <div id="wiz-adres-result" style="display:none;background:#f0f7ff;border:2px solid #E84F1C;border-radius:8px;padding:12px 14px;margin-bottom:16px;font-size:14px;color:#1B2B6E;font-weight:600">
+          <span id="wiz-adres-text"></span>
+        </div>
+        <div id="wiz-adres-error" style="display:none;background:#fff3f0;border:2px solid #eee;border-radius:8px;padding:12px 14px;margin-bottom:16px;font-size:13px;color:#e84f1c">
+          Adres niet gevonden. Controleer postcode en huisnummer.
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <button onclick="wizBack(2)" style="background:transparent;border:2px solid #ddd;border-radius:8px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;color:#1B2B6E">← Vorige</button>
+          <button onclick="wizNext(4)" id="wiz-next3" style="background:#E84F1C;opacity:.5;color:#fff;border:none;border-radius:8px;padding:14px;font-size:15px;font-weight:800;cursor:not-allowed;transition:all .2s">Volgende →</button>
+        </div>
+      </div>
+
+      <!-- Stap 4: Gegevens -->
+      <div id="wiz-step4" style="display:none;padding:24px 28px">
+        <h3 style="font-size:20px;font-weight:800;color:#1B2B6E;margin-bottom:4px">Bijna klaar!</h3>
+        <p style="font-size:14px;color:#888;margin-bottom:20px">Laat je gegevens achter voor een vrijblijvende offerte!</p>
+        <div style="margin-bottom:12px">
+          <label style="font-size:12px;font-weight:700;color:#888;display:flex;align-items:center;gap:6px;margin-bottom:6px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Voor- en achternaam
+          </label>
+          <input id="wiz-naam" type="text" placeholder="Jan Jansen" oninput="wizCheckStep4()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px;font-size:15px;color:#1B2B6E;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'"/>
+        </div>
+        <div style="margin-bottom:12px">
+          <label style="font-size:12px;font-weight:700;color:#888;display:flex;align-items:center;gap:6px;margin-bottom:6px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            E-mailadres
+          </label>
+          <input id="wiz-email" type="email" placeholder="jan@voorbeeld.nl" oninput="wizCheckStep4()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px;font-size:15px;color:#1B2B6E;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'"/>
+        </div>
+        <div style="margin-bottom:24px">
+          <label style="font-size:12px;font-weight:700;color:#888;display:flex;align-items:center;gap:6px;margin-bottom:6px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 011 2.91 2 2 0 012.96 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91A16 16 0 0015.1 16.9l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Telefoonnummer
+          </label>
+          <input id="wiz-tel" type="tel" placeholder="06-12345678" oninput="wizCheckStep4()" style="width:100%;border:2px solid #eee;border-radius:8px;padding:12px;font-size:15px;color:#1B2B6E;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#E84F1C'" onblur="this.style.borderColor='#eee'"/>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+          <button onclick="wizBack(3)" style="background:transparent;border:2px solid #ddd;border-radius:8px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;color:#1B2B6E">← Vorige</button>
+          <button id="wiz-submit" onclick="wizSubmit()" style="background:#E84F1C;opacity:.5;color:#fff;border:none;border-radius:8px;padding:14px;font-size:15px;font-weight:800;cursor:not-allowed;transition:all .2s;text-shadow:0 1px 3px rgba(0,0,0,.2)">Versturen</button>
+        </div>
+        <p style="text-align:center;font-size:12px;color:#aaa">🔒 Uw gegevens worden vertrouwelijk behandeld</p>
+      </div>
+
+      <!-- Bevestiging -->
+      <div id="wiz-done" style="display:none;text-align:center;padding:40px 28px">
+        <div style="font-size:48px;margin-bottom:16px">✅</div>
+        <h3 style="color:#1B2B6E;font-size:22px;font-weight:800;margin-bottom:8px">Aanvraag ontvangen!</h3>
+        <p style="color:#666;font-size:15px">Binnen 2 werkdagen neemt een adviseur contact met je op.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+var wizData = {};
+
+function wizCheckStep1() {
+  var modules = wizData['wiz-modules'];
+  var zp = document.getElementById('wiz-zonnepanelen').value;
+  var btn = document.getElementById('wiz-next1');
+  if (modules && zp) { btn.style.opacity='1'; btn.style.cursor='pointer'; }
+  else { btn.style.opacity='.5'; btn.style.cursor='not-allowed'; }
+}
+
+function wizSelect(el, groupId) {
+  document.querySelectorAll('#' + groupId + ' .wiz-opt').forEach(function(o) {
+    o.style.border = '2px solid #eee';
+    o.style.background = '#fff';
+    var r = o.querySelector('.wiz-radio');
+    if (r) r.style.background = '#fff';
+  });
+  el.style.border = '2px solid #E84F1C';
+  el.style.background = 'rgba(232,79,28,.06)';
+  var r = el.querySelector('.wiz-radio');
+  if (r) r.style.background = '#E84F1C';
+  wizData[groupId] = el.getAttribute('data-val');
+
+  // Activeer volgende knop
+  if (groupId === 'wiz-modules') wizCheckStep1();
+  if (groupId === 'wiz-nood')    wizData['noodstroom'] = el.getAttribute('data-val');
+  if (groupId === 'wiz-timing')  wizActivate('wiz-next2');
+}
+
+function wizActivate(btnId) {
+  var btn = document.getElementById(btnId);
+  if (btn) { btn.style.opacity = '1'; btn.style.cursor = 'pointer'; }
+}
+
+var adresTimer = null;
+function wizCheckStep3() {
+  var p = document.getElementById('wiz-postcode').value.replace(/\s/g,'').toUpperCase();
+  var h = document.getElementById('wiz-huisnr').value.trim();
+  var btn = document.getElementById('wiz-next3');
+  var result = document.getElementById('wiz-adres-result');
+  var error = document.getElementById('wiz-adres-error');
+  var text = document.getElementById('wiz-adres-text');
+
+  btn.style.opacity='.5'; btn.style.cursor='not-allowed';
+  result.style.display='none'; error.style.display='none';
+
+  if (/^[1-9][0-9]{3}[A-Z]{2}$/.test(p) && h) {
+    clearTimeout(adresTimer);
+    adresTimer = setTimeout(function() {
+      text.textContent = '🔍 Adres opzoeken...';
+      result.style.display = 'block';
+
+      var query = encodeURIComponent(p + ' ' + h);
+      fetch('https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=' + query + '&fq=type:adres&rows=1')
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          if (d && d.response && d.response.docs && d.response.docs.length > 0) {
+            var doc = d.response.docs[0];
+            var straat = doc.straatnaam || '';
+            var plaats = doc.woonplaatsnaam || '';
+            var pc = doc.postcode || p;
+            if (straat) {
+              text.textContent = '📍 ' + straat + ' ' + h + ', ' + pc + ' ' + plaats;
+              wizData['adres'] = straat + ' ' + h + ', ' + pc + ' ' + plaats;
+              result.style.display='block'; error.style.display='none';
+              btn.style.opacity='1'; btn.style.cursor='pointer';
+            } else { throw new Error(); }
+          } else { throw new Error(); }
+        })
+        .catch(function(){
+          error.style.display='block'; result.style.display='none';
+          btn.style.opacity='1'; btn.style.cursor='pointer';
+        });
+    }, 700);
+  }
+}
+
+function wizCheckStep4() {
+  var n = document.getElementById('wiz-naam').value.trim();
+  var e = document.getElementById('wiz-email').value.trim();
+  var t = document.getElementById('wiz-tel').value.trim();
+  var btn = document.getElementById('wiz-submit');
+  if (n && e && t) { btn.style.opacity='1'; btn.style.cursor='pointer'; }
+  else { btn.style.opacity='.5'; btn.style.cursor='not-allowed'; }
+}
+
+var wizLabels = {1:'Stap 1 van 4 — Uw situatie',2:'Stap 2 van 4 — Planning',3:'Stap 3 van 4 — Uw adres',4:'Stap 4 van 4 — Uw gegevens'};
+function wizNext(step) {
+  for (var i=1;i<=4;i++) {
+    var el = document.getElementById('wiz-step'+i);
+    if (el) el.style.display = i===step ? 'block' : 'none';
+  }
+  document.getElementById('wiz-staplabel').textContent = wizLabels[step] || ('Stap '+step+' van 4');
+  document.getElementById('wiz-progress').style.width = (step * 25) + '%';
+}
+
+function wizBack(step) { wizNext(step); }
+
+function wizSubmit() {
+  var n = document.getElementById('wiz-naam').value.trim();
+  var e = document.getElementById('wiz-email').value.trim();
+  var t = document.getElementById('wiz-tel').value.trim();
+  if (!n||!e||!t) return;
+  var btn = document.getElementById('wiz-submit');
+  btn.textContent = 'Versturen...'; btn.style.opacity='.7'; btn.style.cursor='not-allowed';
+  var modules = wizData['wiz-modules']||'Niet opgegeven';
+  var nood    = wizData['wiz-nood']||'Niet opgegeven';
+  var zp      = document.getElementById('wiz-zonnepanelen').value||'Niet opgegeven';
+  var timing  = wizData['wiz-timing']||'Niet opgegeven';
+  var adres   = wizData['adres']||'Niet opgegeven';
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    body: JSON.stringify({
+      access_key: '3e71e966-871e-4e34-84ce-62d140f2ec74',
+      subject: 'Offerte aanvraag AlphaESS – ' + n,
+      from_name: n, name: n, email: e,
+      telefoon: t, adres: adres, modules: modules,
+      noodstroompakket: nood, zonnepanelen: zp, planning: timing
+    })
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(d){
+    if (d.success) {
+      for (var i=1;i<=4;i++) { var el=document.getElementById('wiz-step'+i); if(el) el.style.display='none'; }
+      document.getElementById('wiz-done').style.display='block';
+      document.getElementById('wiz-progress').style.width='100%';
+      document.getElementById('wiz-staplabel').textContent='Klaar!';
+    } else {
+      btn.textContent='Versturen'; btn.style.opacity='1'; btn.style.cursor='pointer';
+      alert('Er ging iets mis. Probeer het opnieuw.');
+    }
+  })
+  .catch(function(){
+    btn.textContent='Versturen'; btn.style.opacity='1'; btn.style.cursor='pointer';
+    alert('Er ging iets mis. Probeer het opnieuw.');
+  });
+}
+</script>
+
+<!-- FAQ sectie -->
+<section id="faq" style="background:var(--ow);padding:76px max(5%, calc(50% - 640px))">
+  <div class="sl">Veelgestelde vragen</div>
+  <h2>Alles wat u wilt weten over de <span>SMILE-G3</span></h2>
+  <p class="intro">Heeft u een vraag die hier niet bij staat? Neem gerust contact met ons op.</p>
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:860px" id="faq-list">
+
+    <div class="faq-item" style="background:#fff;border-radius:12px;border:1.5px solid var(--gl);overflow:hidden">
+      <button onclick="faqToggle(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;gap:16px">
+        <span style="font-size:15px;font-weight:700;color:var(--nvd)">Hoeveel modules heb ik nodig voor mijn situatie?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-body" style="display:none;padding:0 24px 20px;font-size:14px;color:#555;line-height:1.8">
+        Dit hangt af van uw jaarlijks energieverbruik en de opwek van uw zonnepanelen. Als vuistregel geldt: voor een gemiddeld huishouden met 4.000 kWh verbruik en 4.000 kWh opwek zijn 3 modules samen 9,3 kWh vaak voldoende. Wilt u ook slim handelen op dynamische tarieven en/of onbalans markt of heeft u een groter verbruik, dan raden wij soms meer modules aan. Onze adviseurs helpen u graag de optimale configuratie te bepalen.
+      </div>
+    </div>
+
+    <div class="faq-item" style="background:#fff;border-radius:12px;border:1.5px solid var(--gl);overflow:hidden">
+      <button onclick="faqToggle(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;gap:16px">
+        <span style="font-size:15px;font-weight:700;color:var(--nvd)">Kan de batterij ook buiten geplaatst worden?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-body" style="display:none;padding:0 24px 20px;font-size:14px;color:#555;line-height:1.8">
+        Ja, de SMILE-G3-BAT-9.3S heeft een IP65-certificering, wat betekent dat hij volledig stof- en spatwaterdicht is. Daarnaast is er een ingebouwde verwarming aanwezig die de batterij ook bij vrieskou beschermt. U kunt hem dus probleemloos aan een buitenmuur of in een schuur monteren.
+      </div>
+    </div>
+
+    <div class="faq-item" style="background:#fff;border-radius:12px;border:1.5px solid var(--gl);overflow:hidden">
+      <button onclick="faqToggle(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;gap:16px">
+        <span style="font-size:15px;font-weight:700;color:var(--nvd)">Hoe lang duurt de installatie?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-body" style="display:none;padding:0 24px 20px;font-size:14px;color:#555;line-height:1.8">
+        Een standaardinstallatie van meerdere modules is doorgaans binnen één dag afgerond. Onze gecertificeerde monteurs verzorgen de volledige plaatsing, bekabeling en inbedrijfstelling — inclusief koppeling met de AlphaESS-app en eventueel Frank Energie.
+      </div>
+    </div>
+
+    <div class="faq-item" style="background:#fff;border-radius:12px;border:1.5px solid var(--gl);overflow:hidden">
+      <button onclick="faqToggle(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;gap:16px">
+        <span style="font-size:15px;font-weight:700;color:var(--nvd)">Kan ik later extra modules toevoegen?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-body" style="display:none;padding:0 24px 20px;font-size:14px;color:#555;line-height:1.8">
+        Absoluut. Het SMILE-G3-systeem is modulair opgebouwd. U begint met 1 of meerdere modules en breidt eenvoudig uit tot maximaal 6 modules per cluster (60,6 kWh). Meerdere clusters kunnen zelfs gecombineerd worden voor capaciteiten boven de 100 kWh. Uitbreiden kan op ieder gewenst moment.
+      </div>
+    </div>
+
+    <div class="faq-item" style="background:#fff;border-radius:12px;border:1.5px solid var(--gl);overflow:hidden">
+      <button onclick="faqToggle(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;gap:16px">
+        <span style="font-size:15px;font-weight:700;color:var(--nvd)">Welke garantie krijg ik op de batterij?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-body" style="display:none;padding:0 24px 20px;font-size:14px;color:#555;line-height:1.8">
+        AlphaESS geeft 10 jaar fabrieksgarantie op de SMILE-G3-BAT. De verwachte levensduur bedraagt 15 tot 20 jaar, met meer dan 10.000 laadcycli. Dankzij de LiFePO₄-celtechnologie blijft de batterij ook na vele jaren nog betrouwbaar en veilig in gebruik.
+      </div>
+    </div>
+
+    <div class="faq-item" style="background:#fff;border-radius:12px;border:1.5px solid var(--gl);overflow:hidden">
+      <button onclick="faqToggle(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;gap:16px">
+        <span style="font-size:15px;font-weight:700;color:var(--nvd)">Kan ik BTW terugvragen op de thuisbatterij?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-body" style="display:none;padding:0 24px 20px;font-size:14px;color:#555;line-height:1.8">
+        In veel gevallen kunt u 21% BTW terugvragen bij de Belastingdienst wanneer u de thuisbatterij combineert met een dynamisch energiecontract. Dit kan een aanzienlijke besparing opleveren op de aanschafkosten. Onze adviseurs informeren u hier graag verder over tijdens het offertetraject.
+      </div>
+    </div>
+
+    <div class="faq-item" style="background:#fff;border-radius:12px;border:1.5px solid var(--gl);overflow:hidden">
+      <button onclick="faqToggle(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;gap:16px">
+        <span style="font-size:15px;font-weight:700;color:var(--nvd)">Wat doet het noodstroompakket AlphaESS Backup Box?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-body" style="display:none;padding:0 24px 20px;font-size:14px;color:#555;line-height:1.8">
+        De AlphaESS Backup Box is een optioneel noodstroompakket dat uw woning bij een stroomstoring binnen 10 milliseconden automatisch laat overschakelen op de thuisbatterij. Een groot voordeel ten opzichte van veel andere merken is dat uw zonnepanelen gewoon blijven werken tijdens de storing. Volgens berekening van Nibud gebruikt een gemiddeld huishouden 0.3 kWh stroom per uur waardoor met een 9.3 kWh batterij je 30 uur voorzien bent van noodstroom en laadt de batterij indien leeg in 1 uur weer volledig op. Zo bent u maximaal onafhankelijk van het net.
+      </div>
+    </div>
+
+    <div class="faq-item" style="background:#fff;border-radius:12px;border:1.5px solid var(--gl);overflow:hidden">
+      <button onclick="faqToggle(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;gap:16px">
+        <span style="font-size:15px;font-weight:700;color:var(--nvd)">Werkt de batterij ook tijdens een stroomstoring zonder de AlphaESS Backup Box?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-body" style="display:none;padding:0 24px 20px;font-size:14px;color:#555;line-height:1.8">
+        De SMILE-G3 beschikt over standaard een back-up functie noodstopcontact op de batterij zelf. Een groot pluspunt dat de Smile G3 standaard heeft t.o.v. veel andere merken thuisbatterijen is de zogenaamde Black Start functie. Mocht de stroom uitvallen dan kan de omvormer zichzelf met behulp van de zonnepanelen weer opladen.
+      </div>
+    </div>
+
+    <div class="faq-item" style="background:#fff;border-radius:12px;border:1.5px solid var(--gl);overflow:hidden">
+      <button onclick="faqToggle(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;gap:16px">
+        <span style="font-size:15px;font-weight:700;color:var(--nvd)">Hoe werkt de koppeling met Frank Energie?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-body" style="display:none;padding:0 24px 20px;font-size:14px;color:#555;line-height:1.8">
+        Via de AlphaESS EMS-software koppelt de batterij automatisch met Frank Energie. Het systeem laadt de batterij op wanneer de stroomprijzen laag zijn (bijvoorbeeld 's nachts of op zonnige middagen) en zet de opgeslagen energie in wanneer de prijzen hoog zijn. Dit gebeurt volledig automatisch, zonder dat u er iets voor hoeft te doen.
+      </div>
+    </div>
+
+    <div class="faq-item" style="background:#fff;border-radius:12px;border:1.5px solid var(--gl);overflow:hidden">
+      <button onclick="faqToggle(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;gap:16px">
+        <span style="font-size:15px;font-weight:700;color:var(--nvd)">Wat is het verschil met de AlphaESS 3.8 modules en de AlphaESS 9.3S?</span>
+        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-body" style="display:none;padding:0 24px 20px;font-size:14px;color:#555;line-height:1.8">
+        De AlphaESS 9.3S is een nieuwere uitvoering die compacter is, buiten kan staan door de ingebouwde verwarming en is waterdicht (IP65), dit in tegenstelling tot de 3.8 kWh modules die niet kunnen verwarmen en absoluut niet buiten mogen staan (IP21).
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.faq-item button:hover span { color: var(--or); }
+</style>
+
+<script>
+function faqToggle(btn) {
+  var body = btn.nextElementSibling;
+  var icon = btn.querySelector('.faq-icon');
+  var isOpen = body.style.display === 'block';
+  body.style.display = isOpen ? 'none' : 'block';
+  icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+</script>
+
+<!-- AlphaESS sectie -->
+<section style="background:#fff;padding:76px max(5%, calc(50% - 640px));text-align:center">
+  <h2 style="color:var(--nvd);font-size:clamp(20px,3vw,36px);margin-bottom:16px">AlphaESS: de beste keuze in <span>thuisbatterijen voor Nederland</span></h2>
+  <p style="color:var(--gr);font-size:15px;line-height:1.8;max-width:780px;margin:0 auto 56px">Bij AlphaESS werken we elke dag aan één doel: slimme, veilige en betrouwbare energieopslag bereikbaar maken voor ieder huishouden. We helpen Nederlandse gezinnen om meer van hun eigen zonne-energie te gebruiken, voorbereid te zijn op het einde van de salderingsregeling en te profiteren van dynamische energietarieven.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;text-align:left">
+    <!-- Kaart 1 -->
+    <div style="background:#f8f8f4;border-radius:16px;padding:32px 28px">
+      <div style="width:64px;height:64px;background:rgba(232,79,28,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="1.8"><path d="M21.21 15.89A10 10 0 118 2.83"/><path d="M22 12A10 10 0 0012 2v10z"/></svg>
+      </div>
+      <div style="font-size:26px;font-weight:800;color:#b8952a;margin-bottom:6px">28,8%</div>
+      <div style="font-size:16px;font-weight:800;color:var(--nvd);margin-bottom:12px">marktleider in Nederland</div>
+      <p style="font-size:14px;color:var(--gr);line-height:1.7">In de eerste helft van 2025 behaalde AlphaESS een marktaandeel van 28,8% in de Nederlandse markt voor thuisbatterijen. Daarmee zijn we de meest gekozen oplossing voor residentiële energieopslag.</p>
+    </div>
+    <!-- Kaart 2 -->
+    <div style="background:#f8f8f4;border-radius:16px;padding:32px 28px">
+      <div style="width:64px;height:64px;background:rgba(232,79,28,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="1.8"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      </div>
+      <div style="font-size:26px;font-weight:800;color:#b8952a;margin-bottom:6px">600% groei</div>
+      <div style="font-size:16px;font-weight:800;color:var(--nvd);margin-bottom:12px">vertrouwen van duizenden huishoudens</div>
+      <p style="font-size:14px;color:var(--gr);line-height:1.7">Onze groei van meer dan 600% ten opzichte van 2024 laat zien dat steeds meer Nederlanders kiezen voor een betrouwbare thuisbatterij die zich al ruimschoots heeft bewezen in de praktijk.</p>
+    </div>
+    <!-- Kaart 3 -->
+    <div style="background:#f8f8f4;border-radius:16px;padding:32px 28px">
+      <div style="width:64px;height:64px;background:rgba(232,79,28,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <div style="font-size:26px;font-weight:800;color:#b8952a;margin-bottom:6px">42% voorkeur</div>
+      <div style="font-size:16px;font-weight:800;color:var(--nvd);margin-bottom:12px">aanbevolen door installateurs</div>
+      <p style="font-size:14px;color:var(--gr);line-height:1.7">Maar liefst 42% van de installateurs in Nederland geeft de voorkeur aan AlphaESS. Dankzij onze stabiele technologie, eenvoudige integratie en langdurige service zijn we de voorkeurskeuz binnen het installateurnetwerk en bij Nederlandse energiebedrijven.</p>
+    </div>
+  </div>
+  <div style="margin-top:48px">
+    <a href="alphaess-brochure.html" style="display:inline-flex;align-items:center;gap:10px;background:var(--or);color:#fff;padding:14px 32px;border-radius:4px;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:.5px;transition:background .2s,transform .15s" onmouseover="this.style.background='#FF6B35';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#E84F1C';this.style.transform='translateY(0)'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      Bekijk de SMILE G3 Brochure
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:14px">
+    <img src="logo.jpg" alt="VDV Installaties" style="height:36px;width:auto;border-radius:4px"/>
+    <p>&#169; 2013 - 2026 VDV Installaties B.V.</p>
+  </div>
+  <div class="fl" style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+    <a href="https://vdvinstallaties.nl/privacybeleid">Privacy</a>
+    <a href="https://vdvinstallaties.nl/algemene-voorwaarden">Algemene Voorwaarden</a>
+    <a href="https://vdvinstallaties.nl/servicevoorwaarden">Service Voorwaarden</a>
+    <a href="https://vdvinstallaties.nl/over-ons">Sitemap</a>
+    <a href="#" onclick="window.print();return false;">PDF</a>
+  </div>
+  <a href="https://wa.me/31652021982" target="_blank" title="Chat via WhatsApp" style="width:46px;height:46px;background:#E84F1C;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(232,79,28,0.4);flex-shrink:0;transition:background .2s,transform .2s;" onmouseover="this.style.background='#FF6B35';this.style.transform='scale(1.1)'" onmouseout="this.style.background='#E84F1C';this.style.transform='scale(1)'">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.856L.057 23.214a.75.75 0 00.921.921l5.356-1.477A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 01-4.953-1.355l-.355-.211-3.676 1.013 1.013-3.676-.211-.355A9.713 9.713 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+  </a>
+</footer>
+
+<style>
+@media (pointer: fine) {
+  * { cursor: none !important; }
+  #cursor-dot {
+    position: fixed;
+    top: 0; left: 0;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: rgba(232, 79, 28, 0.55);
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  }
+  #cursor-dot.clicking {
+    width: 16px; height: 16px;
+    background: rgba(232, 79, 28, 0.85);
+  }
+}
+@media (pointer: coarse) {
+  #cursor-dot { display: none !important; }
+}
+</style>
+<div id="cursor-dot"></div>
+<script>
+(function(){
+  if (window.matchMedia('(pointer: fine)').matches) {
+    var dot = document.getElementById('cursor-dot');
+    document.addEventListener('mousemove', function(e){
+      dot.style.left = e.clientX + 'px';
+      dot.style.top  = e.clientY + 'px';
+    });
+    document.addEventListener('mousedown', function(){ dot.classList.add('clicking'); });
+    document.addEventListener('mouseup',   function(){ dot.classList.remove('clicking'); });
+  }
+})();
+</script>
+
+
+
+
+<style>
+/* Scroll animation – beginstand */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Kleine vertraging per kind-element */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+</style>
+
+<script>
+(function(){
+  // Elementen die we willen animeren
+  var selectors = [
+    'section h2',
+    'section .sl',
+    'section .intro',
+    '.vc',       // voordeel-kaartjes
+    '.scc',      // schaal-kaartjes
+    '.stcard',   // spec-tabellen
+    '.spgrid > div',
+    'section > .inner > *',
+    'footer',
+    '.trust .ti',
+    '[style*="border-radius:16px"]', // over-ons kaartjes
+  ];
+
+  var elements = [];
+  selectors.forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(el){
+      if(!el.classList.contains('reveal')){
+        el.classList.add('reveal');
+        elements.push(el);
+      }
+    });
+  });
+
+  // Kleine staggered vertraging voor groepen naast elkaar
+  document.querySelectorAll('.vg, .scg, .trust-inner, .spgrid').forEach(function(parent){
+    var kids = parent.querySelectorAll('.reveal');
+    kids.forEach(function(kid, i){
+      kid.classList.add('reveal-delay-' + Math.min(i+1, 4));
+    });
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  elements.forEach(function(el){ observer.observe(el); });
+})();
+</script>
+
+</body>
+</html>

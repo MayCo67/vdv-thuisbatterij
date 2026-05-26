@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Offerte Link Aanmaken – VDV Installaties</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--or:#E84F1C;--nv:#1B2B6E;--nvd:#0F1B4D;--wh:#fff;--ow:#F7F8FC;--gr:#6b7280;--gl:#E8EAF2}
+body{font-family:'Barlow',sans-serif;background:var(--ow);color:var(--nvd);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:40px 16px}
+.card{background:#fff;border-radius:16px;box-shadow:0 4px 32px rgba(0,0,0,.10);max-width:580px;width:100%;overflow:hidden}
+.card-header{background:linear-gradient(135deg,var(--nvd),var(--nv));padding:28px 32px}
+.card-header h1{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:#fff;margin-bottom:4px}
+.card-header p{font-size:13px;color:rgba(255,255,255,.6)}
+.card-body{padding:32px}
+.section-label{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--or);margin-bottom:14px;margin-top:24px}
+.section-label:first-child{margin-top:0}
+.field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.field label{font-size:12px;font-weight:700;color:var(--gr);text-transform:uppercase;letter-spacing:.5px}
+.field input{border:1.5px solid var(--gl);border-radius:8px;padding:10px 14px;font-family:'Barlow',sans-serif;font-size:15px;font-weight:600;color:var(--nvd);outline:none;transition:border-color .2s;background:#fff}
+.field input:focus{border-color:var(--or)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.nood-toggle{display:flex;gap:8px;margin-bottom:14px}
+.nood-btn{flex:1;padding:10px;border-radius:8px;font-family:'Barlow',sans-serif;font-size:13px;font-weight:700;cursor:pointer;border:1.5px solid var(--gl);background:var(--ow);color:var(--gr);transition:all .2s;text-align:center}
+.nood-btn.active{background:var(--or);border-color:var(--or);color:#fff}
+.result-box{background:var(--ow);border:2px dashed var(--gl);border-radius:10px;padding:20px;margin-top:24px;display:none}
+.result-box.zichtbaar{display:block}
+.result-label{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--gr);margin-bottom:8px}
+.link-text{font-size:12px;color:var(--gr);word-break:break-all;line-height:1.6;background:#fff;border:1.5px solid var(--gl);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-style:italic}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 20px;border-radius:8px;font-family:'Barlow',sans-serif;font-size:14px;font-weight:800;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-or{background:var(--or);color:#fff}
+.btn-or:hover{background:#FF6B35;transform:translateY(-1px)}
+.btn-green{background:#25D366;color:#fff}
+.btn-green:hover{background:#1ebe5a;transform:translateY(-1px)}
+.btn-nv{background:var(--nvd);color:#fff}
+.btn-nv:hover{background:#253580;transform:translateY(-1px)}
+.btn-gl{background:var(--ow);color:var(--nvd);border:1.5px solid var(--gl)}
+.btn-gl:hover{background:var(--gl)}
+.gen-btn{width:100%;padding:14px;border-radius:10px;font-family:'Barlow',sans-serif;font-size:16px;font-weight:800;cursor:pointer;border:none;background:var(--or);color:#fff;margin-top:8px;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:10px}
+.gen-btn:hover{background:#FF6B35;transform:translateY(-1px);box-shadow:0 6px 20px rgba(232,79,28,.3)}
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--nvd);color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:700;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap;z-index:999}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.preview-blok{border-radius:10px;padding:16px 18px;margin-top:14px;font-size:13px;line-height:1.7;display:none}
+.preview-blok.zichtbaar{display:block}
+.preview-wa{background:#e9fbe9;border:1.5px solid #b2dfb2;color:#1a3a1a}
+.preview-mail{background:#eef0fb;border:1.5px solid #c5caea;color:#1a1a3a;margin-top:10px}
+.preview-blok .preview-titel{font-weight:800;font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.preview-wa .preview-titel{color:#1B5E20}
+.preview-mail .preview-titel{color:var(--nvd)}
+.mail-knop-preview{display:inline-block;background:#E84F1C;color:#fff;padding:12px 28px;border-radius:6px;font-weight:800;font-size:14px;margin:12px 0;text-decoration:none}
+@media(max-width:500px){.grid2{grid-template-columns:1fr}.btn-row{flex-direction:column}.btn{justify-content:center}}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-header">
+    <h1>📋 Offerte Link Aanmaken</h1>
+    <p>Vul de klantgegevens in en verstuur een persoonlijke offerte</p>
+  </div>
+  <div class="card-body">
+
+    <div class="section-label">👤 Klantgegevens</div>
+    <div class="grid2">
+      <div class="field"><label>Naam</label><input id="f-naam" type="text" placeholder="Jan de Vries" oninput="updateLink()"/></div>
+      <div class="field"><label>Telefoon</label><input id="f-tel" type="text" placeholder="06-12345678" oninput="updateLink()"/></div>
+      <div class="field"><label>E-mail klant</label><input id="f-email" type="text" placeholder="jan@email.nl" oninput="updateLink()"/></div>
+      <div class="field"><label>Adres</label><input id="f-adres" type="text" placeholder="Straat 1, 5735 GW Plaats" oninput="updateLink()"/></div>
+    </div>
+    <div class="field"><label>Offertenummer</label><input id="f-nr" type="text" placeholder="VDV-2025-001" oninput="updateLink()"/></div>
+
+    <div class="section-label">⚡ Noodstroompakket</div>
+    <div class="nood-toggle">
+      <button class="nood-btn active" id="nood-ja" onclick="setNood(true)">✓ Ja, inclusief noodstroom</button>
+      <button class="nood-btn" id="nood-nee" onclick="setNood(false)">✗ Nee, zonder noodstroom</button>
+    </div>
+
+    <div class="section-label">💶 Prijzen</div>
+    <div class="grid2">
+      <div class="field"><label>Batterij + installatie (€) excl. btw</label><input id="f-p1" type="number" value="5785" oninput="updateLink()"/></div>
+      <div class="field"><label>Noodstroompakket (€)</label><input id="f-p2" type="number" value="1000" oninput="updateLink()"/></div>
+      <div class="field"><label>Extra kosten (€) excl. btw</label><input id="f-p3" type="number" value="0" oninput="updateLink()"/></div>
+      <div class="field"><label>BTW %</label><input id="f-btw" type="number" value="21" oninput="updateLink()"/></div>
+    </div>
+
+    <div class="section-label">🔗 Website URL</div>
+    <div class="field"><label>Adres van jouw offerte pagina</label><input id="f-baseurl" type="text" value="https://coolenwebbouw.myqnapcloud.com:8081/vdv-installaties-thuisbatterij/offerte.html" oninput="updateLink()"/></div>
+
+    <button class="gen-btn" onclick="genereer()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+      Genereer &amp; verstuur offerte
+    </button>
+
+    <div class="result-box" id="result-box">
+      <div class="result-label">Verstuur via</div>
+      <div class="btn-row">
+        <button class="btn btn-or" onclick="downloadOFT()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Download Outlook Sjabloon
+        </button>
+        <button class="btn btn-green" onclick="stuurWhatsapp()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.856L.057 23.214a.75.75 0 00.921.921l5.356-1.477A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 01-4.953-1.355l-.355-.211-3.676 1.013 1.013-3.676-.211-.355A9.713 9.713 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          Stuur via WhatsApp
+        </button>
+        <a class="btn btn-gl" id="preview-btn" href="#" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          Preview
+        </a>
+      </div>
+
+      <!-- WhatsApp preview -->
+      <div class="preview-blok preview-wa" id="wa-preview">
+        <div class="preview-titel">📱 WhatsApp bericht</div>
+        <span id="wa-tekst" style="white-space:pre-line"></span>
+      </div>
+
+      <!-- E-mail preview -->
+      <div class="preview-blok preview-mail" id="mail-preview">
+        <div class="preview-titel">✉️ E-mail voorbeeld — zo ziet de klant het</div>
+        <div id="mail-preview-inhoud"></div>
+      </div>
+
+      <div style="margin-top:12px;font-size:11px;color:var(--gr);font-style:italic">
+        🔗 Technische link (verborgen in de knop): <span id="link-output" style="word-break:break-all"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast" id="toast">✓ Gekopieerd!</div>
+
+<script>
+var noodstroom = true;
+var huidigLink = '';
+
+function setNood(val){
+  noodstroom = val;
+  document.getElementById('nood-ja').className = 'nood-btn'+(val?' active':'');
+  document.getElementById('nood-nee').className = 'nood-btn'+(!val?' active':'');
+  var p2veld = document.getElementById('f-p2');
+  if(!val){
+    p2veld.value = 0;
+    p2veld.style.opacity = '0.4';
+    p2veld.disabled = true;
+  } else {
+    if(p2veld.value == 0) p2veld.value = 1000;
+    p2veld.style.opacity = '1';
+    p2veld.disabled = false;
+  }
+  updateLink();
+}
+
+function updateLink(){
+  if(document.getElementById('result-box').classList.contains('zichtbaar')){
+    genereer();
+  }
+}
+
+function genereer(){
+  var naam  = document.getElementById('f-naam').value.trim();
+  var tel   = document.getElementById('f-tel').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  var adres = document.getElementById('f-adres').value.trim();
+  var nr    = document.getElementById('f-nr').value.trim();
+  var p1    = document.getElementById('f-p1').value;
+  var p2    = document.getElementById('f-p2').value;
+  var p3    = document.getElementById('f-p3').value;
+  var btw   = document.getElementById('f-btw').value;
+  var base  = document.getElementById('f-baseurl').value.trim();
+
+  if(!naam){ alert('Vul minimaal de naam van de klant in.'); return; }
+  if(!base){ alert('Vul het adres van jouw offerte pagina in.'); return; }
+
+  var url = new URL(base);
+  if(naam)  url.searchParams.set('naam',  naam);
+  if(tel)   url.searchParams.set('tel',   tel);
+  if(email) url.searchParams.set('email', email);
+  if(adres) url.searchParams.set('adres', adres);
+  if(nr)    url.searchParams.set('nr',    nr);
+  url.searchParams.set('p1', p1);
+  url.searchParams.set('p2', p2);
+  if(parseFloat(p3)>0) url.searchParams.set('p3', p3);
+  url.searchParams.set('btw', btw);
+  if(!noodstroom) url.searchParams.set('nood', 'nee');
+
+  huidigLink = url.toString();
+  document.getElementById('link-output').textContent = huidigLink;
+  document.getElementById('preview-btn').href = huidigLink;
+
+  // WhatsApp tekst
+  var waTekst =
+    'Beste ' + naam + ',\n\n' +
+    'Hartelijk dank voor uw interesse in een thuisbatterij!\n\n' +
+    '👉 Bekijk hier uw persoonlijke offerte:\n' +
+    huidigLink + '\n\n' +
+    'Via de offerte kunt u direct akkoord geven.\n' +
+    'Heeft u vragen? Bel of app ons gerust.\n\n' +
+    'Met vriendelijke groet,\n' +
+    'VDV Installaties\n' +
+    '📞 06 52 02 19 82';
+  document.getElementById('wa-tekst').innerText = waTekst;
+  document.getElementById('wa-preview').classList.add('zichtbaar');
+
+  // E-mail HTML preview
+  var mailHtml =
+    '<div style="font-family:Arial,sans-serif;font-size:14px;color:#1a1a2e;line-height:1.7">' +
+    '<p>Beste <strong>' + naam + '</strong>,</p>' +
+    '<p>Hartelijk dank voor uw interesse in een AlphaESS thuisbatterij!</p>' +
+    '<p>Ik heb een persoonlijke offerte voor u klaarstaan. U kunt deze bekijken en direct akkoord geven via de knop hieronder:</p>' +
+    '<p style="text-align:center;margin:24px 0">' +
+    '<a href="' + huidigLink + '" style="background:#E84F1C;color:#fff;padding:14px 32px;border-radius:6px;font-weight:800;font-size:15px;text-decoration:none;display:inline-block">👉 Bekijk uw offerte &amp; geef akkoord</a>' +
+    '</p>' +
+    '<p>Heeft u vragen? Belt u ons gerust op <strong>06 52 02 19 82</strong> of stuur een WhatsApp.</p>' +
+    '<p>Met vriendelijke groet,<br/><strong>VDV Installaties</strong><br/>Bosscheweg 78, 5735 GW Aarle-Rixtel</p>' +
+    '</div>';
+
+  document.getElementById('mail-preview-inhoud').innerHTML = mailHtml;
+  document.getElementById('mail-preview').classList.add('zichtbaar');
+  document.getElementById('result-box').classList.add('zichtbaar');
+}
+
+function openEmailPagina(){
+  if(!huidigLink){ genereer(); if(!huidigLink) return; }
+  var naam  = document.getElementById('f-naam').value.trim()||'';
+  var html =
+    '<!DOCTYPE html><html><head><meta charset="UTF-8"/>' +
+    '<title>E-mail kopiëren – VDV Installaties</title>' +
+    '<style>body{margin:0;padding:0;background:#f0f2f8;font-family:Arial,sans-serif}' +
+    '.instructie{background:#0F1B4D;color:#fff;padding:16px 24px;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap}' +
+    '.instructie span{opacity:.8;font-weight:400;font-size:13px}' +
+    '.kopieer-btn{background:#E84F1C;color:#fff;border:none;padding:10px 22px;border-radius:6px;font-size:14px;font-weight:800;cursor:pointer;transition:background .2s}' +
+    '.kopieer-btn:hover{background:#FF6B35}' +
+    '.wrapper{max-width:600px;margin:32px auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.12)}' +
+    '</style></head><body>' +
+    '<div class="instructie">' +
+    '<div>📋 <strong>Stap 1:</strong> Klik op "Alles selecteren" &nbsp;|&nbsp; <strong>Stap 2:</strong> Kopieer (Ctrl+C) &nbsp;|&nbsp; <strong>Stap 3:</strong> Plak in Gmail of Outlook (Ctrl+V)<br/><span>De oranje knop blijft zichtbaar in je mail!</span></div>' +
+    '<button class="kopieer-btn" onclick="selecteerAlles()">Alles selecteren</button>' +
+    '</div>' +
+    '<div class="wrapper" id="emailinhoud">' +
+
+    // Header
+    '<div style="background:linear-gradient(135deg,#0F1B4D,#1B2B6E);padding:32px 40px">' +
+    '<img src="https://coolenwebbouw.myqnapcloud.com:8081/vdv-installaties-thuisbatterij/logo.jpg" alt="VDV Installaties" style="height:44px;width:auto;border-radius:4px" onerror="this.style.display=\'none\'"/>' +
+    '<div style="color:rgba(255,255,255,.7);font-size:12px;margin-top:8px;letter-spacing:1px;text-transform:uppercase">Zonnepanelen · Airco · Thuisbatterijen</div>' +
+    '</div>' +
+
+    // Body
+    '<div style="padding:40px">' +
+    '<p style="font-size:16px;font-weight:700;color:#0F1B4D;margin:0 0 16px">Beste <strong>' + naam + '</strong>,</p>' +
+    '<p style="font-size:14px;color:#374151;line-height:1.8;margin:0 0 14px">Hartelijk dank voor uw interesse in een <strong>AlphaESS SMILE-G3 thuisbatterij</strong>!</p>' +
+    '<p style="font-size:14px;color:#374151;line-height:1.8;margin:0 0 24px">Ik heb een persoonlijke offerte voor u klaarstaan. Bekijk uw offerte via de knop hieronder en geef direct akkoord als u akkoord bent:</p>' +
+
+    // Knop
+    '<div style="text-align:center;margin:32px 0">' +
+    '<a href="' + huidigLink + '" style="background:#E84F1C;color:#ffffff;padding:16px 40px;border-radius:6px;font-size:16px;font-weight:800;text-decoration:none;display:inline-block;letter-spacing:.5px">👉&nbsp; Bekijk uw offerte &amp; geef akkoord</a>' +
+    '</div>' +
+
+    '<p style="font-size:13px;color:#6b7280;line-height:1.8;margin:0 0 14px">Heeft u vragen over uw offerte? Neem gerust contact met ons op:</p>' +
+    '<table style="font-size:13px;color:#374151;border-collapse:collapse"><tr><td style="padding:3px 12px 3px 0;color:#6b7280">📞 Telefoon</td><td><strong>06 52 02 19 82</strong></td></tr>' +
+    '<tr><td style="padding:3px 12px 3px 0;color:#6b7280">✉️ E-mail</td><td><strong>info@vdvinstallaties.nl</strong></td></tr>' +
+    '<tr><td style="padding:3px 12px 3px 0;color:#6b7280">📍 Adres</td><td>Bosscheweg 78, 5735 GW Aarle-Rixtel</td></tr></table>' +
+    '<p style="font-size:14px;color:#374151;margin:24px 0 0">Met vriendelijke groet,<br/><strong style="color:#0F1B4D">VDV Installaties</strong></p>' +
+    '</div>' +
+
+    // Footer
+    '<div style="background:#0F1B4D;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">' +
+    '<span style="color:rgba(255,255,255,.6);font-size:11px">© 2025 VDV Installaties B.V.</span>' +
+    '<span style="color:#FFD700;font-size:13px">★★★★★ <span style="color:rgba(255,255,255,.7)">4.8 | 500+ klanten</span></span>' +
+    '</div>' +
+    '</div>' +
+
+    '<script>function selecteerAlles(){' +
+    'var el=document.getElementById("emailinhoud");' +
+    'var range=document.createRange();' +
+    'range.selectNodeContents(el);' +
+    'var sel=window.getSelection();' +
+    'sel.removeAllRanges();' +
+    'sel.addRange(range);' +
+    '}<\/script>' +
+    '</body></html>';
+
+  var win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+}
+
+function downloadOFT(){
+  if(!huidigLink){ genereer(); if(!huidigLink) return; }
+  var naam  = document.getElementById('f-naam').value.trim()||'';
+  var email = document.getElementById('f-email').value.trim()||'';
+  var nr    = document.getElementById('f-nr').value.trim()||'';
+
+  var onderwerp = 'Uw persoonlijke offerte – VDV Installaties' + (nr ? ' ('+nr+')' : '');
+
+  var htmlBody =
+    '<html><body>' +
+    '<table width="100%" cellpadding="0" cellspacing="0" style="background:#f0f2f8;padding:32px 0"><tr><td align="center">' +
+    '<table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:8px;overflow:hidden;font-family:Arial,sans-serif">' +
+
+    // Header
+    '<tr><td bgcolor="#0F1B4D" style="background-color:#0F1B4D;padding:28px 40px">' +
+    '<table cellpadding="0" cellspacing="0" width="100%"><tr>' +
+    '<td><div style="color:#ffffff;font-family:Arial,sans-serif;font-size:26px;font-weight:900;letter-spacing:1px;line-height:1">VDV Installaties</div>' +
+    '<div style="color:#E84F1C;font-family:Arial,sans-serif;font-size:13px;font-weight:bold;margin-top:6px;letter-spacing:1.5px;text-transform:uppercase">Zonnepanelen &nbsp;&middot;&nbsp; Airco &nbsp;&middot;&nbsp; Thuisbatterijen</div></td>' +
+    '<td align="right" valign="top" style="padding-top:0"><div style="background-color:#0F1B4D;border:1px solid rgba(255,255,255,0.25);color:#ffffff;font-family:Arial,sans-serif;font-size:11px;font-weight:bold;padding:6px 12px;border-radius:20px;white-space:nowrap;line-height:1;display:inline-block;margin-top:0"><span style="color:#FFD700;font-size:11px;letter-spacing:1px">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="font-size:11px;letter-spacing:0.5px"> 4.8 | 500+ klanten</span></div></td>' +
+    '</tr></table>' +
+    '<div style="border-top:2px solid #E84F1C;margin-top:18px"></div>' +
+    '</td></tr>' +
+
+    // Body
+    '<tr><td style="padding:40px">' +
+    '<p style="font-size:16px;font-weight:bold;color:#0F1B4D;margin:0 0 16px 0">Beste ' + naam + ',</p>' +
+    '<p style="font-size:14px;color:#374151;line-height:1.8;margin:0 0 14px 0">Hartelijk dank voor uw interesse in een <strong>AlphaESS SMILE-G3 thuisbatterij</strong>!</p>' +
+    '<p style="font-size:14px;color:#374151;line-height:1.8;margin:0 0 28px 0">Ik heb een persoonlijke offerte voor u klaarstaan. Bekijk uw offerte via de knop hieronder en geef direct akkoord als u akkoord bent:</p>' +
+
+    // Oranje knop
+    '<table cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="padding:8px 0 32px 0">' +
+    '<a href="' + huidigLink + '" style="background-color:#E84F1C;color:#ffffff;padding:22px 56px;border-radius:8px;font-size:20px;font-weight:bold;text-decoration:none;display:inline-block;mso-padding-alt:0;border:2px solid #E84F1C;letter-spacing:0.5px">' +
+    '&#128073;&nbsp;&nbsp;Bekijk uw offerte &amp; geef akkoord' +
+    '</a></td></tr></table>' +
+
+    '<p style="font-size:13px;color:#6b7280;line-height:1.8;margin:0 0 14px 0">Heeft u vragen over uw offerte? Neem gerust contact met ons op:</p>' +
+    '<table style="font-size:13px;color:#374151;border-collapse:collapse">' +
+    '<tr><td style="padding:4px 0;color:#6b7280;white-space:nowrap;width:110px">&#128222;&nbsp; Telefoon</td><td style="padding:4px 0"><strong>06 52 02 19 82</strong></td></tr>' +
+    '<tr><td style="padding:4px 0;color:#6b7280;white-space:nowrap;width:110px">&#9993;&nbsp; E-mail</td><td style="padding:4px 0"><strong>info@vdvinstallaties.nl</strong></td></tr>' +
+    '<tr><td style="padding:4px 0;color:#6b7280;white-space:nowrap;width:110px">&#128205;&nbsp; Adres</td><td style="padding:4px 0">Bosscheweg 78, 5735 GW Aarle-Rixtel</td></tr>' +
+    '</table>' +
+    '<p style="font-size:14px;color:#374151;margin:28px 0 0 0">Met vriendelijke groet,<br/><br/><strong style="color:#0F1B4D;font-size:15px">VDV Installaties</strong></p>' +
+    '</td></tr>' +
+
+    // Footer
+    '<tr><td style="background:#0F1B4D;padding:18px 40px">' +
+    '<table width="100%"><tr>' +
+    '<td style="color:rgba(255,255,255,0.6);font-size:11px">&copy; 2025 VDV Installaties B.V.</td>' +
+    '<td align="right" style="color:#FFD700;font-size:13px">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color:rgba(255,255,255,0.7)">4.8 | 500+ klanten</span></td>' +
+    '</tr></table>' +
+    '</td></tr>' +
+    '</table></td></tr></table>' +
+    '</body></html>';
+
+  // Bouw het .oft bestand op als MIME
+  var mime =
+    'To: ' + email + '\r\n' +
+    'Subject: ' + onderwerp + '\r\n' +
+    'MIME-Version: 1.0\r\n' +
+    'Content-Type: text/html; charset=UTF-8\r\n' +
+    'X-Unsent: 1\r\n' +
+    '\r\n' +
+    htmlBody;
+
+  var blob = new Blob([mime], {type: 'message/rfc822'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'offerte-' + (naam.replace(/\s+/g,'-')||'klant') + '.eml';
+  a.click();
+
+  // Toast tonen
+  var t = document.getElementById('toast');
+  t.textContent = '✓ E-mail bestand gedownload! Dubbelklik om te openen in Outlook.';
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); t.textContent='✓ Gekopieerd!'; }, 4000);
+}
+
+function stuurMail(){
+  if(!huidigLink){ genereer(); return; }
+  var naam  = document.getElementById('f-naam').value.trim()||'';
+  var email = document.getElementById('f-email').value.trim()||'';
+  var subject = encodeURIComponent('Uw persoonlijke offerte – VDV Installaties');
+  var body = encodeURIComponent(
+    'Beste ' + naam + ',\n\n' +
+    'Hartelijk dank voor uw interesse in een AlphaESS thuisbatterij!\n\n' +
+    'Ik heb een persoonlijke offerte voor u klaarstaan.\n' +
+    'Klik op de link hieronder om uw offerte te bekijken en direct akkoord te geven:\n\n' +
+    '👉 Bekijk uw offerte & geef akkoord:\n' +
+    huidigLink + '\n\n' +
+    'Heeft u vragen? Belt u ons gerust op 06 52 02 19 82.\n\n' +
+    'Met vriendelijke groet,\n' +
+    'VDV Installaties\n' +
+    'Bosscheweg 78, 5735 GW Aarle-Rixtel\n' +
+    'Tel: 06 52 02 19 82\n' +
+    'info@vdvinstallaties.nl'
+  );
+  window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
+}
+
+// ===== URL PARAMETERS AUTOMATISCH INLEZEN =====
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  function set(id, val){ var el=document.getElementById(id); if(el&&val) el.value=val; }
+  set('f-naam',  p.get('naam'));
+  set('f-tel',   p.get('tel'));
+  set('f-email', p.get('email'));
+  set('f-adres', p.get('adres'));
+  set('f-nr',    p.get('nr'));
+  set('f-p1',    p.get('p1'));
+  set('f-p2',    p.get('p2'));
+  set('f-p3',    p.get('p3'));
+  set('f-btw',   p.get('btw'));
+  if(p.get('nood')==='nee') setNood(false);
+  if(p.get('naam')) { updateLink(); genereer(); }
+})();
+
+function stuurWhatsapp(){
+  if(!huidigLink){ genereer(); return; }
+  var naam = document.getElementById('f-naam').value.trim();
+  var tekst =
+    'Beste ' + naam + ',\n\n' +
+    'Hartelijk dank voor uw interesse in een thuisbatterij!\n\n' +
+    '👉 Bekijk hier uw persoonlijke offerte:\n' +
+    huidigLink + '\n\n' +
+    'Via de offerte kunt u direct akkoord geven.\n' +
+    'Heeft u vragen? Bel of app ons gerust.\n\n' +
+    'Met vriendelijke groet,\n' +
+    'VDV Installaties\n' +
+    '📞 06 52 02 19 82';
+  window.open('https://wa.me/?text=' + encodeURIComponent(tekst), '_blank');
+}
+</script>
+</body>
+</html>
