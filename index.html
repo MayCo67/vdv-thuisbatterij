@@ -1334,6 +1334,10 @@ function b2Submit(){
             </div>
             <button type="button" onclick="stepField('c14',100)" class="bc-step-btn" style="width:40px;flex-shrink:0;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:20px;font-weight:300;cursor:pointer;transition:background .15s" onmouseover="this.style.background='rgba(232,79,28,.5)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">+</button>
           </div>
+          <div style="margin-top:8px;padding:8px 12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:6px;display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:11px;font-weight:700;color:rgba(255,255,255,.85);text-transform:uppercase;letter-spacing:.8px">Excl. BTW (21%)</span>
+            <span id="c14-excl-btw" style="font-size:14px;font-weight:800;color:#6FE87A">€ 5.785</span>
+          </div>
         </div>
 
         <!-- C15: Dynamisch contract -->
@@ -1485,6 +1489,11 @@ function b2Submit(){
       var C13 = parseFloat(document.getElementById('c13').value) || 0;  // batterijcapaciteit
       var C14 = parseFloat(document.getElementById('c14').value) || 0;  // aanschaf incl BTW
       var C15 = parseInt(document.getElementById('c15').value)   || 0;  // dynamisch contract
+
+      // Toon excl. BTW bedrag
+      var exclBtw = C14 / 1.21;
+      var exclEl = document.getElementById('c14-excl-btw');
+      if(exclEl) exclEl.textContent = '\u20AC\u00a0' + exclBtw.toLocaleString('nl-NL', {minimumFractionDigits:0, maximumFractionDigits:0});
 
       // Referentiedata (Sheet 2) — exacte vaste waarden
       var REF_C6  = EIGEN_ZONDER;  // 0.30
