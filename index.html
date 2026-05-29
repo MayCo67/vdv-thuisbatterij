@@ -103,7 +103,7 @@ nav ul{list-style:none;display:flex;gap:24px;align-items:center}
 nav ul a{color:rgba(255,255,255,.8);text-decoration:none;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;transition:color .2s}
 nav ul a:hover{color:var(--or)}
 .ncta{background:var(--or)!important;color:#fff!important;padding:9px 20px;border-radius:4px}
-.hero{background:linear-gradient(135deg,var(--nvd) 0%,var(--nvm) 60%,#1a3a8a 100%);min-height:88vh;display:flex;align-items:center;justify-content:center;padding:80px 5%;position:relative;overflow:hidden}
+.hero{background:#fff;min-height:88vh;display:flex;align-items:center;justify-content:center;padding:80px 5%;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-80px;right:-80px;width:500px;height:500px;border-radius:50%;background:rgba(232,79,28,.07);pointer-events:none}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,79,28,.18);border:1px solid rgba(232,79,28,.45);color:#FF9A6C;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:20px}
 .badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--or);animation:p 1.8s infinite}
@@ -135,10 +135,10 @@ nav ul a:hover{color:var(--or)}
 section{padding:76px max(5%, calc(50% - 640px))}
 .inner{max-width:1280px;margin:0 auto;width:100%}
 nav > .nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
-.hero-inner{max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px}
+.hero-inner{max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px;background:linear-gradient(135deg,var(--nvd) 0%,var(--nvm) 60%,#1a3a8a 100%);border-radius:20px;padding:56px 48px}
 .trust-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;justify-content:center;gap:36px;flex-wrap:wrap}
 .footer-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-#slider-section{padding:40px 0 0 0 !important}
+#slider-section{}
 .sl{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--or);margin-bottom:12px}
 h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,3.5vw,46px);font-weight:800;color:var(--nvd);line-height:1.1;margin-bottom:14px}
 h2 span{color:var(--or)}
@@ -218,9 +218,10 @@ h2 span{color:var(--or)}
 .rva{width:36px;height:36px;border-radius:50%;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
 .rvn{font-weight:700;font-size:13px;color:var(--nvd)}
 .rvl{font-size:11px;color:var(--gr)}
-.cont{background:var(--nvd);color:#fff}
-.cont h2{color:#fff}
-.cg{display:grid;grid-template-columns:1fr 1.1fr;gap:52px;align-items:start}
+.cont{background:#fff;color:var(--nvd)}
+.cont h2{color:var(--nvd)}
+.cont .sl{color:var(--or) !important}
+.cg{display:grid;grid-template-columns:1fr 1.1fr;gap:52px;align-items:start;background:var(--nvd);border-radius:20px;padding:52px 48px}
 .cfw{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px}
 .fr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
 .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
@@ -300,7 +301,12 @@ footer a:hover{color:var(--or)}
   /* Footer flex col */
   footer{flex-direction:column;align-items:flex-start;gap:16px;padding:20px 4%}
   /* AlphaESS sectie padding */
-  section[style*="background:#fff"]{padding:48px 4% !important}
+  section[style*="background:#fff"]{padding:24px 4% !important}
+  /* Inner blauwe kaarten smaller padding op mobiel */
+  .hero-inner,
+  section[style*="background:#fff"] > div[style*="background:var(--nvd)"],
+  section[style*="background:#fff"] > div[style*="background:linear-gradient"],
+  section[style*="background:#fff"] > div[style*="background:#0F1B4D"] { padding:32px 20px !important; border-radius:12px !important }
   /* Hcard verberg op mobiel in hero */
   .hcard{display:none}
   /* Brochure knop full width */
@@ -642,7 +648,8 @@ function b2Submit(){
   </div>
 </section>
 
-<section id="voordelen" style="background:var(--nvd);padding:76px max(5%, calc(50% - 640px))">
+<section id="voordelen" style="background:#fff;padding:76px max(5%, calc(50% - 640px))">
+  <div style="background:var(--nvd);border-radius:20px;padding:56px 48px;max-width:1280px;margin:0 auto">
   <div class="sl" style="color:rgba(232,79,28,.9)">Waarom de SMILE-G3</div>
   <h2 style="color:#fff">Zes sterke redenen<br/><span>voor deze batterij</span></h2>
   <p class="intro" style="color:rgba(255,255,255,.6)">De SMILE-G3-BAT-9.3S combineert veiligheid, schaalbaarheid en slimme energie-integratie in één toekomstbestendig systeem.</p>
@@ -654,6 +661,7 @@ function b2Submit(){
     <div class="vc"><div class="vi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><text x="3" y="17" font-family="Arial" font-size="18" font-weight="900" fill="#E84F1C">€</text></svg></div><h4>Terugverdientijd ~6 jaar</h4><p>Met huidige energieprijzen en ISDE-subsidie verdient u de investering in 5 à 7 jaar terug.</p></div>
     <div class="vc"><div class="vi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h4>Live inzicht via app</h4><p>Volg productie en accustatus realtime. Koppelbaar met Frank Energie voor maximale besparing.</p></div>
   </div>
+</div>
 </section>
 
 <section id="schaal" class="schaal">
@@ -674,7 +682,8 @@ function b2Submit(){
   </div>
 </section>
 
-<section style="background:var(--nvd);padding:76px max(5%, calc(50% - 640px))">
+<section style="background:#fff;padding:76px max(5%, calc(50% - 640px))">
+  <div style="background:var(--nvd);border-radius:20px;padding:56px 48px;max-width:1280px;margin:0 auto">
   <div class="sl" style="color:rgba(232,79,28,.9)">Het installatieproces</div>
   <h2 style="color:#fff">Van aanvraag tot<br/><span>energie besparen</span></h2>
   <p class="intro" style="color:rgba(255,255,255,.6)">VDV Installaties regelt alles — van adviesgesprek tot inbedrijfstelling.</p>
@@ -805,8 +814,9 @@ function b2Submit(){
       </svg>
     </div>
   </div>
+  </div>
+  </div>
 </section>
-
 <style>
 #sun-rays {
   animation: spin-rays 4s linear infinite;
@@ -934,11 +944,12 @@ function b2Submit(){
 </section>
 
 <!-- Fotoslider -->
-<section id="slider-section" style="background:#fff;overflow:hidden;box-sizing:border-box">
-  <div style="max-width:900px;margin:0 auto;padding:0 8%">
+<section id="slider-section" style="background:#fff;box-sizing:border-box;padding:40px max(5%, calc(50% - 640px))">
+  <div style="max-width:1280px;margin:0 auto">
+  <div style="max-width:900px;margin:0 auto 36px;padding:0">
     <h2 style="text-align:center;margin-bottom:36px">Specificaties <span>AlphaESS Smile G3</span></h2>
   </div>
-  <div style="background:#0F1B4D;padding:80px 0 60px 0">
+  <div style="background:#0F1B4D;padding:80px 0 60px 0;border-radius:20px;overflow:hidden">
     <div style="position:relative;overflow:hidden">
     <div id="slider-track" style="display:flex;transition:transform 0.5s ease;will-change:transform">
       <!-- Slide 1 -->
@@ -982,6 +993,7 @@ function b2Submit(){
       </button>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- Video modal -->
@@ -1023,10 +1035,11 @@ function b2Submit(){
 
 <div style="background:#fff;height:48px"></div>
 
-<section id="dynamic" class="dyn">
-  <div class="sl">Slim energiebeheer</div>
-  <h2>Profiteer van<br/><span>dynamische energieprijzen</span></h2>
-  <p class="intro">De SMILE-G3 is ideaal voor slim stroom handelen. Laad goedkoop op en gebruik zelf als de prijs hoog is — volledig automatisch.</p>
+<section id="dynamic" style="background:#fff;padding:76px max(5%, calc(50% - 640px))">
+  <div style="background:linear-gradient(135deg,var(--nvd),var(--nvm));border-radius:20px;padding:56px 48px;max-width:1280px;margin:0 auto">
+  <div class="sl" style="color:rgba(232,79,28,.9)">Slim energiebeheer</div>
+  <h2 style="color:#fff">Profiteer van<br/><span>dynamische energieprijzen</span></h2>
+  <p class="intro" style="color:rgba(255,255,255,.6);max-width:100%">De SMILE-G3 is ideaal voor slim stroom handelen. Laad goedkoop op en gebruik zelf als de prijs hoog is — volledig automatisch.</p>
   <div class="dg">
     <div>
       <div class="di"><div class="dic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E84F1C" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><h5>Laden bij lage tarieven</h5><p>Automatisch laden als stroomprijzen laag zijn — 's nachts of op zonnige middagen.</p></div></div>
@@ -1219,7 +1232,8 @@ function b2Submit(){
   </script>
 </section>
 
-<section id="business-case" style="padding:76px max(5%, calc(50% - 640px));background:var(--nvd)">
+<section id="business-case" style="padding:76px max(5%, calc(50% - 640px));background:#fff">
+  <div style="background:var(--nvd);border-radius:20px;padding:56px 48px;max-width:1280px;margin:0 auto">
   <div class="sl" style="color:rgba(232,79,28,.9)">Financiële onderbouwing</div>
   <h2 style="color:#fff">Business Case <span>Thuisbatterij met EMS</span></h2>
   <p class="intro" style="color:rgba(255,255,255,.6)">Berekening op basis van een dynamisch contract (2027). U kunt hier zelf alle waarden invoeren om zo specifiek uw eigen situatie duidelijk zichtbaar te maken.</p>
@@ -1601,6 +1615,7 @@ function b2Submit(){
     calcBC();
   })();
   </script>
+  </div>
 </section>
 
 <section id="contact" class="cont">
@@ -2095,6 +2110,10 @@ function faqToggle(btn) {
     <a href="alphaess-brochure.html" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--or);color:#fff;padding:14px 32px;border-radius:4px;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:.5px;transition:background .2s,transform .15s;width:320px;box-sizing:border-box" onmouseover="this.style.background='#FF6B35';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#E84F1C';this.style.transform='translateY(0)'">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
       Bekijk de SMILE G3 Brochure
+    </a>
+    <a href="VDV_Installaties_Brochure.pdf" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--nvd);color:#fff;padding:14px 32px;border-radius:4px;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:.5px;transition:background .2s,transform .15s;width:320px;box-sizing:border-box" onmouseover="this.style.background='#253580';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--nvd)';this.style.transform='translateY(0)'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      Bekijk de VDV Brochure
     </a>
   </div>
 
