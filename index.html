@@ -606,10 +606,10 @@ function b2Submit(){
     <div>
       <h2>De <span>SMILE-G3-BAT-9.3S</span><br/>thuisbatterij</h2>
       <div class="mref">Model: AlphaESS SMILE-G3-BAT-9.3S &nbsp;·&nbsp; 96V LiFePO₄</div>
-      <p>De AlphaESS SMILE-G3-BAT-9.3S is een modulaire 9,3 kWh LiFePO₄-thuisbatterij (96V) die uitblinkt in schaalbaarheid en prestaties. Speciaal ontworpen voor de nieuwste SMILE-G3 hybride omvormers in 1-fase (S5) of 3-fase (T4 - T20) uitvoering.</p>
-      <p>IP65-gecertificeerd voor buitenmontage, met ingebouwde verwarming voor koude winters. Dankzij LiFePO₄-technologie haalt u tot 10.000 laadcycli en een levensduur van 15 jaar — met 10 jaar fabrieksgarantie.</p>
-      <p>De batterijen zijn extreem veilig, de batterij is uitgerust met een Multi-BMS (Battery Management System) dat cellen monitort en bij defecten automatisch isoleert.</p>
-      <p>Ideaal voor slim handelen op dynamische energieprijzen, met koppeling aan Frank Energie, NextEnergy of vergelijkbare diensten.</p>
+      <p>De AlphaESS SMILE-G3-BAT-9.3S is een modulaire 9,3 kWh LiFePO₄-thuisbatterij (96V) die uitblinkt in schaalbaarheid en prestaties. Speciaal ontworpen voor de nieuwste SMILE-G3 hybride omvormers in 1-fase (S5) of 3-fase (T4 - T20) uitvoering. De batterij heeft een nominale capaciteit van 9,3 kWh en dankzij de High-Voltage techniek is deze ook voor 100% bruikbaar. Maximale Laad-/Ontlaadstroom van 52,5 A</p>
+      <p>IP65-gecertificeerd, volledig stof en spuitwaterdicht voor vochtige ruimtes en buitenmontage, met ingebouwde verwarming voor koude winters. Dankzij de LiFePO₄-technologie haalt u zeker tot 10.000 laadcycli en een minimale levensduur van 15 jaar — met 10 jaar fabrieksgarantie.</p>
+      <p>De batterijen zijn extreem veilig, de batterij is uitgerust met een Multi-BMS (Battery Management System) dat cellen monitort en bij defecten automatisch isoleert daarnaast heeft deze batterij ook nog Ingebouwde drukkleppen en een geïntegreerd automatisch aerosol brandblussysteem.</p>
+      <p>Ideaal voor slim handelen op dynamische energieprijzen en onbalansmarkt, met koppeling aan Frank Energie, Next Energy of vergelijkbare diensten.</p>
       <div class="tags" style="margin-bottom:40px">
         <span class="tag">LiFePO₄ veiligste cel</span>
         <span class="tag">IP65 buitenmontage</span>
@@ -1551,15 +1551,10 @@ function revSubmit() {
 
   <!-- Overtuigingstekst -->
   <div id="bc-overtuiging" style="margin-top:48px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-left:4px solid var(--or);border-radius:14px;padding:36px 40px">
-    <p style="font-size:16px;color:rgba(255,255,255,.88);line-height:1.9;font-weight:400">
-      Laten wij eerlijk zijn: de batterij stort geen
-      <strong style="color:var(--or)" id="txt-nadeel1">€ 0</strong>
-      aan winst op uw bankrekening. Wat de batterij wél doet, is uw vermogen beschermen.
-    </p>
-    <p style="font-size:16px;color:rgba(255,255,255,.88);line-height:1.9;margin-top:16px">
-      Als u niks doet vanaf 2027, lekt er door de nieuwe regels en terugleverboetes de komende 20 jaar zo'n
+    <p style="font-size:16px;color:rgba(255,255,255,.88);line-height:1.9;margin-top:0">
+      Als u niks doet vanaf 2027, lekt er door de nieuwe regels en terugleverboetes de komende 15 jaar zo'n
       <strong style="color:#f87171" id="txt-s2">€ 0</strong>
-      uit uw portemonnee. Dat geld bent u sowieso kwijt aan uw energieleverancier.*
+      uit uw portemonnee. Dat geld bent u kwijt aan uw energieleverancier.*
     </p>
     <p style="font-size:16px;color:rgba(255,255,255,.88);line-height:1.9;margin-top:16px">
       Als u nu kiest voor de AlphaESS en Frank Energie, voorkomt u die kosten én bouwt u een netto winst op van zo'n
@@ -1687,7 +1682,6 @@ function revSubmit() {
       document.getElementById('res-voordeel').textContent   = fmt(s2Totaal + winst20);
 
       // Overtuigingstekst
-      document.getElementById('txt-nadeel1').textContent = fmt(nadeelS2);
       document.getElementById('txt-s2').textContent      = fmt(s2Totaal);
       document.getElementById('txt-winst').textContent   = fmt(winst20);
       document.getElementById('txt-nadeel2').textContent = fmt(nadeelS2);
